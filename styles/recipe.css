@@ -1,0 +1,428 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1daf;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    transition: padding 0.3s ease-in-out;
+}
+
+/* Responsive Header */
+@media (min-width: 1200px) {
+    header {
+        padding: 10px 10%;
+    }
+}
+
+@media (max-width: 992px) {
+    header {
+        padding: 10px 3%;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1daf;
+    text-decoration: none;
+}
+
+.logo:hover {
+    color: #0c8a6b;
+}
+
+/* Navigation */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    transition: gap 0.3s ease-in-out;
+}
+
+@media (min-width: 1200px) {
+    .nav-links {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-links {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #1daf;
+}
+
+/* Search Bar */
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container form {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 2px solid #1daf;
+    border-radius: 20px;
+    padding: 5px;
+    transition: width 0.3s ease-in-out;
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+.search-container:hover input {
+    width: 200px;
+}
+
+.search-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #1daf;
+}
+
+/* Authentication Buttons */
+.auth-links {
+    display: flex;
+    gap: 10px;
+    transition: gap 0.3s ease-in-out;
+}
+
+@media (min-width: 1200px) {
+    .auth-links {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .auth-links {
+        gap: 8px;
+    }
+}
+
+.auth-links a {
+    text-decoration: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 2px solid #1daf;
+}
+
+.login {
+    background: white;
+    color: #1daf;
+}
+
+.login:hover,
+.signup:hover {
+    background: #1daf;
+    color: white;
+}
+
+.signup {
+    background: #1daf;
+    color: white;
+}
+
+/*welcome section*/
+.country-section {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.country-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 2rem auto;
+}
+
+.country-card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1rem;
+    animation: fadeInUp 0.8s ease both;
+}
+
+.country-card img {
+    width: 100px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.country-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Main recipe container */
+.recipe-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    animation: fadeIn 0.8s ease-in-out;
+    overflow: hidden;
+}
+
+/* Make images inside scale nicely */
+.recipe-container img {
+    width: 617px;
+    height: 370px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Heading styles */
+.recipe-container h1 {
+    color: #1daf;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    font-style: italic;
+    transition: color 0.3s;
+}
+
+.recipe-container em {
+    display: block;
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+/* Section titles */
+.recipe-container h2 {
+    margin-top: 30px;
+    font-size: 1.8rem;
+    color: #444;
+    border-bottom: 2px solid #1daf;
+    padding-bottom: 5px;
+}
+
+.recipe-container h3 {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Text paragraphs */
+.recipe-container p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+/* Ingredient list */
+.recipe-container ul {
+    list-style: disc inside;
+    margin: 20px 0;
+    padding-left: 15px;
+}
+
+.recipe-container ul li {
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+    transition: background-color 0.3s;
+}
+
+.recipe-container ul li:hover {
+    background-color: #f0f0ff;
+}
+
+/* Instructions list */
+.recipe-container ol {
+    list-style: decimal inside;
+    margin: 20px 0;
+    padding-left: 15px;
+}
+
+.recipe-container ol li {
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+/* Back button */
+.back-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 24px;
+    background-color: #1daf;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-weight: bold;
+}
+
+.back-button:hover {
+    background-color: #1daf;
+    transform: translateY(-2px);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Small device tweaks */
+@media (max-width: 600px) {
+    .recipe-container {
+        padding: 20px;
+        margin: 20px;
+    }
+}
+
+.home-button {
+    display: inline-block;
+    background-color: #1daf;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.home-button:hover {
+    background-color: #0d8aa8;
+}
+
+/* Register Page Animation */
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    animation: fadeSlideUp 1s ease forwards;
+}
+
+/* Fade-in animation for forms */
+.form-container form {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: formFade 1s forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes formFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Input and button hover focus animations */
+.container input:hover,
+.container input:focus {
+    background-color: #d6f5f2;
+    box-shadow: 0 0 5px aquamarine;
+}
+
+.container button {
+    transition: background-color 0.4s, transform 0.3s;
+}
+
+.container button:hover {
+    transform: scale(1.05);
+}
+
+/* Home Button Animation */
+.home-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.home-button::after {
+    content: "";
+    background: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    transform: skewX(-20deg);
+    transition: 0.5s;
+}
+
+.home-button:hover::after {
+    left: 100%;
+}
