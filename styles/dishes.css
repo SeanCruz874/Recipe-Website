@@ -41,18 +41,91 @@ header {
     font-weight: bold;
     color: #1daf;
     text-decoration: none;
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+    animation: logoEntrance 0.8s ease forwards;
+    opacity: 0;
+}
+
+@keyframes logoEntrance {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.logo::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #0c8a6b;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
 }
 
 .logo:hover {
     color: #0c8a6b;
+    transform: scale(1.05);
 }
 
-/* Navigation */
+.logo:hover::after {
+    transform: scaleX(1);
+}
+
 .nav-links {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     transition: gap 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeInNav 0.8s ease forwards;
+    animation-delay: 0.3s;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: slideInLink 0.5s forwards;
+}
+
+.nav-links a:nth-child(1) { animation-delay: 0.4s; }
+.nav-links a:nth-child(2) { animation-delay: 0.5s; }
+.nav-links a:nth-child(3) { animation-delay: 0.6s; }
+.nav-links a:nth-child(4) { animation-delay: 0.7s; }
+
+.nav-links a:hover {
+    color: #1daf;
+}
+
+/* Animations */
+@keyframes fadeInNav {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLink {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (min-width: 1200px) {
@@ -71,23 +144,18 @@ header {
     .nav-links {
         flex-direction: column;
         gap: 10px;
+        align-items: flex-start;
     }
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-}
-
-.nav-links a:hover {
-    color: #1daf;
-}
 
 /* Search Bar */
 .search-container {
     display: flex;
     align-items: center;
+    animation: fadeSlideIn 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateY(-10px);
 }
 
 .search-container form {
@@ -96,8 +164,10 @@ header {
     background: white;
     border: 2px solid #1daf;
     border-radius: 20px;
-    padding: 5px;
-    transition: width 0.3s ease-in-out;
+    padding: 5px 10px;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    position: relative;
 }
 
 .search-container input {
@@ -105,25 +175,48 @@ header {
     outline: none;
     padding: 5px;
     width: 0;
-    transition: width 0.3s ease;
+    font-size: 14px;
+    transition: width 0.4s ease;
+    background: transparent;
+    color: #333;
 }
 
-.search-container:hover input {
+.search-container:hover input,
+.search-container form:focus-within input {
     width: 200px;
 }
 
+/* Search Button */
 .search-container button {
     background: none;
     border: none;
     cursor: pointer;
     color: #1daf;
+    padding: 5px;
+    transition: color 0.3s ease;
 }
 
-/* Authentication Buttons */
+.search-container button:hover {
+    color: #0d8a6b;
+}
+
+/* Fade-in Animation */
+@keyframes fadeSlideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Authentication Buttons Container */
 .auth-links {
     display: flex;
     gap: 10px;
     transition: gap 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeInUp 0.7s ease-out forwards;
+    animation-delay: 0.4s;
 }
 
 @media (min-width: 1200px) {
@@ -140,12 +233,17 @@ header {
 
 .auth-links a {
     text-decoration: none;
-    padding: 8px 12px;
+    padding: 8px 16px;
     font-size: 14px;
     border-radius: 5px;
     border: 2px solid #1daf;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    position: relative;
+    overflow: hidden;
 }
 
+/* Login Button */
 .login {
     background: white;
     color: #1daf;
@@ -155,17 +253,44 @@ header {
 .signup:hover {
     background: #1daf;
     color: white;
+    transform: translateY(-2px);
 }
 
+/* Signup Button */
 .signup {
     background: #1daf;
     color: white;
 }
 
-/*welcome section*/
+.auth-links a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.6s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.auth-links a:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Welcome Section */
 .country-section {
     text-align: center;
     padding: 3rem 1rem;
+    animation: fadeIn 0.8s ease-in-out both;
 }
 
 .country-grid {
@@ -185,11 +310,11 @@ header {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     text-decoration: none;
     color: #333;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
     animation: fadeInUp 0.8s ease both;
     width: 100%;
     box-sizing: border-box;
-    text-align: center;
 }
 
 .country-card img {
@@ -198,8 +323,26 @@ header {
     object-fit: contain;
     border-radius: 10px;
     margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
 }
 
+.country-card:hover img {
+    animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.08);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Mobile Styles */
 @media (max-width: 600px) {
     .country-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -222,9 +365,13 @@ header {
     }
 }
 
-.country-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeInUp {
@@ -232,25 +379,12 @@ header {
         opacity: 0;
         transform: translateY(20px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 /* Carousel Wrapper */
 .country-carousel-wrapper {
@@ -359,10 +493,7 @@ header {
   }
 }
 
-
-
-/*latest recipes added*/
-
+/* latest recipes added */
 .latest-recipes {
     background-color: #fff;
     padding: 4rem 2rem;
@@ -378,8 +509,36 @@ header {
 
 .section-title .icon {
     display: block;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #f5a9e1;
+    transform-origin: center bottom;
+}
+
+.section-title:hover .icon {
+    animation: cakeBounce 0.8s ease-in-out;
+}
+
+/* Cake bounce */
+@keyframes cakeBounce {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+
+    30% {
+        transform: translateY(-5px) scale(1.1);
+    }
+
+    60% {
+        transform: translateY(3px) scale(0.95);
+    }
+
+    90% {
+        transform: translateY(-2px) scale(1.03);
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+    }
 }
 
 /* Recipe Grid */
