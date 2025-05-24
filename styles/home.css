@@ -203,7 +203,6 @@ header {
 @media (max-width: 600px) {
     .country-grid {
         grid-template-columns: repeat(2, 1fr);
-        /* Force 2 columns */
         gap: 1rem;
     }
 
@@ -286,11 +285,11 @@ header {
 .country-track {
   display: flex;
   transition: transform 0.5s ease;
-  gap: 20px; /* spacing between cards */
+  gap: 20px;
 }
 
 .country-card {
-  flex: 0 0 calc((100% - 5 * 23px) / 6); /* Six cards with 20px gap */
+  flex: 0 0 calc((100% - 5 * 23px) / 6);
   background: white;
   border-radius: 16px;
   padding: 15px 10px;
@@ -351,7 +350,7 @@ header {
 
 @media (max-width: 768px) {
   .country-card {
-    flex: 0 0 calc((100% - 20px) / 2); /* 2 cards per view */
+    flex: 0 0 calc((100% - 20px) / 2);
   }
 
   .carousel-btn {
@@ -504,7 +503,6 @@ header {
 /* Mobile Adjustments */
 @media (max-width: 768px) {
 
-    /* 1 card per row */
     .recipes-grid {
         display: grid;
         grid-template-columns: 1fr;
@@ -512,7 +510,6 @@ header {
         padding: 1rem;
     }
 
-    /* Slightly wider cards */
     .recipe-card {
         position: relative;
         aspect-ratio: 4 / 3;
@@ -541,12 +538,10 @@ header {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        /* stack top-left then bottom-info */
         padding: 1rem;
         color: #fff;
     }
 
-    /* Read-time badge */
     .overlay .top-left {
         background: rgba(0, 0, 0, 0.7);
         padding: 0.25rem 0.5rem;
@@ -555,7 +550,6 @@ header {
         align-self: flex-start;
     }
 
-    /* Push the bottom-info group down */
     .bottom-info {
         margin-top: auto;
         display: flex;

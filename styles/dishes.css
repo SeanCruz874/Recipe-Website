@@ -203,7 +203,6 @@ header {
 @media (max-width: 600px) {
     .country-grid {
         grid-template-columns: repeat(2, 1fr);
-        /* Force 2 columns */
         gap: 1rem;
     }
 
@@ -286,11 +285,11 @@ header {
 .country-track {
   display: flex;
   transition: transform 0.5s ease;
-  gap: 20px; /* spacing between cards */
+  gap: 20px;
 }
 
 .country-card {
-  flex: 0 0 calc((100% - 5 * 23px) / 6); /* Six cards with 20px gap */
+  flex: 0 0 calc((100% - 5 * 23px) / 6);
   background: white;
   border-radius: 16px;
   padding: 15px 10px;
@@ -348,6 +347,18 @@ header {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+
+@media (max-width: 768px) {
+  .country-card {
+    flex: 0 0 calc((100% - 20px) / 2);
+  }
+
+  .carousel-btn {
+    top: 45%;
+    transform: translateY(-50%);
+  }
+}
+
 
 
 /*latest recipes added*/
@@ -483,7 +494,6 @@ header {
 
 /* Responsive Layout */
 @media (max-width: 768px) {
-  /* 1 column instead of 2 */
   .recipes-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -491,7 +501,6 @@ header {
     padding: 1rem;
   }
 
-  /* Slightly wide card */
   .recipe-card {
     position: relative;
     aspect-ratio: 4 / 3;
@@ -510,13 +519,13 @@ header {
     object-fit: cover;
   }
 
-  /* FULL overlay, top-to-bottom */
+
   .overlay {
     position: absolute;
     inset: 0;
     display: flex;
     flex-direction: column;
-    /* push bottom-info down */
+
     justify-content: flex-start;
     padding: 0.75rem;
     background: linear-gradient(
@@ -528,7 +537,6 @@ header {
     font-size: 0.8rem;
   }
 
-  /* “8 min read” badge */
   .overlay .top-left {
     background: rgba(0, 0, 0, 0.7);
     padding: 0.25rem 0.5rem;
@@ -537,7 +545,6 @@ header {
     align-self: flex-start;
   }
 
-  /* THIS pushes the content group to the bottom */
   .bottom-info {
     margin-top: auto;
     display: flex;
