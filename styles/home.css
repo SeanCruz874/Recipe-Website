@@ -253,6 +253,113 @@ header {
     }
 }
 
+/* Carousel Wrapper */
+.country-carousel-wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #1daf;
+  border-radius: 16px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.carousel-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #000;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.country-carousel {
+  overflow: hidden;
+  width: 100%;
+}
+
+.country-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 20px; /* spacing between cards */
+}
+
+.country-card {
+  flex: 0 0 calc((100% - 5 * 23px) / 6); /* Six cards with 20px gap */
+  background: white;
+  border-radius: 16px;
+  padding: 15px 10px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 6px 12px #1daf;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.country-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 16px #1daf;
+}
+
+.country-card img {
+  width: 80%;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.country-card h3 {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+}
+
+.carousel-btn {
+  background: #035c48;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.carousel-btn:hover {
+  background-color: #1daf;
+}
+
+
+/* Hide Scrollbar */
+.country-carousel::-webkit-scrollbar {
+    display: none;
+}
+.country-carousel {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+@media (max-width: 768px) {
+  .country-card {
+    flex: 0 0 calc((100% - 20px) / 2); /* 2 cards per view */
+  }
+
+  .carousel-btn {
+    top: 45%;
+    transform: translateY(-50%);
+  }
+}
+
 /*latest recipes added*/
 
 .latest-recipes {

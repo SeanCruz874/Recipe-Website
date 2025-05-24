@@ -18,3 +18,4 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".toggle").style.transition = "transform 0.6s ease-in-out";
     document.querySelector(".toggle-container").style.transition = "transform 0.6s ease-in-out";
 });
+

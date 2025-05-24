@@ -1,4 +1,4 @@
-<script>
+
 document.addEventListener("DOMContentLoaded", function() {
     const searchInput = document.querySelector(".search-container input");
     const recipeCards = document.querySelectorAll(".recipe-card");
@@ -36,4 +36,3 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
-</script>

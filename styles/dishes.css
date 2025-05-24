@@ -4,7 +4,6 @@ body {
     background-color: #1daf;
 }
 
-/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -16,7 +15,6 @@ header {
     transition: padding 0.3s ease-in-out;
 }
 
-/* Responsive Header */
 @media (min-width: 1200px) {
     header {
         padding: 10px 10%;
@@ -176,6 +174,8 @@ header {
     gap: 2rem;
     max-width: 900px;
     margin: 2rem auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
 }
 
 .country-card {
@@ -186,16 +186,41 @@ header {
     text-decoration: none;
     color: #333;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 1rem;
     animation: fadeInUp 0.8s ease both;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .country-card img {
-    width: 100px;
+    width: 70px;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 10px;
     margin-bottom: 0.5rem;
+}
+
+@media (max-width: 600px) {
+    .country-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* Force 2 columns */
+        gap: 1rem;
+    }
+
+    .country-card {
+        padding: 0.75rem;
+    }
+
+    .country-card img {
+        width: 50px;
+        margin-bottom: 0.25rem;
+    }
+
+    .country-card p,
+    .country-card span,
+    .country-card h3 {
+        font-size: 0.85rem;
+    }
 }
 
 .country-card:hover {
@@ -214,6 +239,116 @@ header {
         transform: translateY(0);
     }
 }
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Carousel Wrapper */
+.country-carousel-wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #1daf;
+  border-radius: 16px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.carousel-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #000;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.country-carousel {
+  overflow: hidden;
+  width: 100%;
+}
+
+.country-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 20px; /* spacing between cards */
+}
+
+.country-card {
+  flex: 0 0 calc((100% - 5 * 23px) / 6); /* Six cards with 20px gap */
+  background: white;
+  border-radius: 16px;
+  padding: 15px 10px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 6px 12px #1daf;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.country-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 16px #1daf;
+}
+
+.country-card img {
+  width: 80%;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.country-card h3 {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+}
+
+.carousel-btn {
+  background: #035c48;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.carousel-btn:hover {
+  background-color: #1daf;
+}
+
+
+/* Hide Scrollbar */
+.country-carousel::-webkit-scrollbar {
+    display: none;
+}
+.country-carousel {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 
 /*latest recipes added*/
 
