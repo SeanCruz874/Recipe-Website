@@ -2,84 +2,51 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login & Signup</title>
-    <link rel="stylesheet" href="styles/register.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles/register.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-    <div class="container" id="container">
-        <div class="form-container sign-up">
-            <form>
-                <h1>Create Account</h1>
-                <div class="social-icons">
-                    <img src="images/google-icon.png" alt="Google Icon" class="social-img">
-                    </a>
-                    <img src="images/facebook-icon.png" alt="Facebook Icon" class="social-img">
-                    </a>
-                </div>
-                <span>or use your email for registration</span>
-                <input type="text" style="--i: 1">
-                <input type="password" style="--i: 2">
-                <button style="--i: 3">Sign In</button>
 
-                <input type="password" placeholder="Password">
-                <button>Sign Up</button>
-            </form>
+
+    <div class="container">
+        <div class="left-side">
+            <img src="images/bg.png" alt="Delicious dish" />
         </div>
+        <div class="right-side">
+            <div class="login-box">
+                <div class="logo">Good Recipe, Great Recipe</div>
+                <h2>Log in</h2>
 
-        <div class="form-container sign-in">
-            <form>
-                <h1>Sign In</h1>
-                <div class="social-icons">
-                    <img src="images/google-icon.png" alt="Google Icon" class="social-img">
-                    </a>
-                    <img src="images/facebook-icon.png" alt="Facebook Icon" class="social-img">
-                    </a>
-                </div>
-                <span>or use your account</span>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <a href="#">Forgot your password?</a>
-                <button>Sign In</button>
-            </form>
-        </div>
+                <button class="login-btn">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/new-post.png" alt="Email Icon" />
+                    <a href="email-login.html">Log in with Email</a>
+                </button>
 
-        <div class="toggle-container">
-            <div class="toggle">
-                <div class="toggle-panel toggle-left">
-                    <h1>Welcome Back!</h1>
-                    <p>Sign in to continue</p>
-                    <button class="hidden" id="signIn">Sign In</button>
-                </div>
-                <div class="toggle-panel toggle-right">
-                    <h1>Hello, Friend!</h1>
-                    <p>Sign up and join us</p>
-                    <button class="hidden" id="signUp">Sign Up</button>
+                <button class="login-btn">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/facebook.png" alt="Facebook Icon" />
+                    Log in with Facebook
+                </button>
+
+                <button class="login-btn">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/google-logo.png" alt="Google Icon" />
+                    Log in with Google
+                </button>
+
+                <div class="signup-text">
+                    Don’t have an account? <a href="signup.html">Join now</a>
+
+                    <div class="home-button">
+                        <a href="index.html">← Return Home</a>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- Return Home Button -->
-    <div class="home-button-container">
-        <a href="index.html" class="home-button">Return Home</a>
-    </div>
-
-    <script>
-        const container = document.getElementById('container');
-        const signUpBtn = document.getElementById('signUp');
-        const signInBtn = document.getElementById('signIn');
-
-        signUpBtn.addEventListener('click', () => {
-            container.classList.add('active');
-        });
-
-        signInBtn.addEventListener('click', () => {
-            container.classList.remove('active');
-        });
-    </script>
 </body>
 
 </html>
