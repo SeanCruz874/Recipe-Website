@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What The Sigma</title>
+    <link rel="stylesheet" href="styles/recipe.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Good Recipe, Great Recipe</a>
+
+        <nav class="nav-links">
+            <a href="dishes.html">Dishes</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="search-container">
+            <form action="">
+                <input type="search" placeholder="Search here...">
+                <button type="submit" class="search-button">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+
+        <div class="auth-links">
+            <a href="register.html" class="login">Log In</a>
+            <a href="register.html" class="signup">Sign Up</a>
+        </div>
+    </header>
+
+    <div class="country-carousel-wrapper">
+        <h2 class="carousel-title">Explore Recipes by Country</h2>
+
+        <div class="carousel-container">
+            <button class="carousel-btn left" onclick="scrollCountries('left')">&#10094;</button>
+
+            <div class="country-carousel" id="countryCarousel">
+                <div class="country-track">
+                    <a href="brazil.html" class="country-card">
+                        <img src="images/brazil-flag.png" alt="Brazil Flag">
+                        <h3>Brazil</h3>
+                    </a>
+                    <a href="france.html" class="country-card">
+                        <img src="images/france-flag.png" alt="France Flag">
+                        <h3>France</h3>
+                    </a>
+                    <a href="japan.html" class="country-card">
+                        <img src="images/japan-flag.png" alt="Japan Flag">
+                        <h3>Japan</h3>
+                    </a>
+                    <a href="india.html" class="country-card">
+                        <img src="images/india-flag.png" alt="India Flag">
+                        <h3>India</h3>
+                    </a>
+                    <a href="philippines.html" class="country-card">
+                        <img src="images/philippine_flag.jpg" alt="Philippines Flag">
+                        <h3>Philippines</h3>
+                    </a>
+                    <a href="italy.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/it.png" alt="Italy Flag">
+                        <h3>Italy</h3>
+                    </a>
+                    <a href="thailand.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/th.png" alt="Thailand Flag">
+                        <h3>Thailand</h3>
+                    </a>
+                    <a href="mexico.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/mx.png" alt="Mexico Flag">
+                        <h3>Mexico</h3>
+                    </a>
+                    <a href="us.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/us.png" alt="USA Flag">
+                        <h3>United States</h3>
+                    </a>
+                    <a href="spain.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/es.png" alt="Spain Flag">
+                        <h3>Spain</h3>
+                    </a>
+                    <a href="southkorea.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/kr.png" alt="South Korea Flag">
+                        <h3>South Korea</h3>
+                    </a>
+                    <a href="china.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/cn.png" alt="China Flag">
+                        <h3>China</h3>
+                    </a>
+                </div>
+            </div>
+
+            <button class="carousel-btn right" onclick="scrollCountries('right')">&#10095;</button>
+        </div>
+    </div>
+
+
+    <script>
+        function scrollCountries(direction) {
+            const container = document.getElementById('countryCarousel');
+            const scrollAmount = container.offsetWidth;
+            container.scrollBy({
+                left: direction === 'left' ? -scrollAmount : scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+    <section class="recipe-section">
+        <div class="recipe-container">
+            <img src="images/caprese.png" alt="Caprese Salad">
+            <h1>Caprese Salad</h1>
+            <p>Caprese Salad (Insalata Caprese) is a fresh and simple Italian dish that showcases the perfect harmony of
+                ripe tomatoes, creamy mozzarella, fragrant basil, and a drizzle of olive oil. It's light, vibrant, and
+                easy to prepare—ideal as an appetizer or a refreshing side.</p>
+
+            <h3>Preparation:</h3>
+            <p>10–15 minutes</p>
+
+            <h3>Cook:</h3>
+            <p>None</p>
+
+            <h3>Total:</h3>
+            <p>About 10–15 minutes</p>
+
+            <h2>Ingredients:</h2>
+            <ul>
+                <li>3–4 ripe tomatoes (such as Roma or heirloom), sliced</li>
+                <li>8 ounces (225g) fresh mozzarella, sliced</li>
+                <li>Fresh basil leaves</li>
+                <li>2–3 tablespoons extra-virgin olive oil</li>
+                <li>Balsamic glaze (optional)</li>
+                <li>Salt and freshly ground black pepper, to taste</li>
+            </ul>
+
+            <h2>Instructions:</h2>
+            <ol>
+                <li>Arrange alternating slices of tomato and mozzarella on a serving platter, slightly overlapping.</li>
+
+                <li>Tuck whole basil leaves in between the slices.</li>
+
+                <li>Drizzle with olive oil and balsamic glaze, if using.</li>
+
+                <li>Season with salt and freshly ground black pepper to taste.</li>
+
+                <li>Serve immediately as a light appetizer or side dish.</li>
+            </ol>
+
+            <div class="home-button-container">
+                <a href="index.html" class="home-button">Return Home</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

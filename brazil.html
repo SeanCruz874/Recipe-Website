@@ -34,80 +34,80 @@
     </div>
   </header>
 
-<div class="country-carousel-wrapper">
-  <h2 class="carousel-title">Explore Recipes by Country</h2>
+  <div class="country-carousel-wrapper">
+    <h2 class="carousel-title">Explore Recipes by Country</h2>
 
-  <div class="carousel-container">
-    <button class="carousel-btn left" onclick="scrollCountries('left')">&#10094;</button>
+    <div class="carousel-container">
+      <button class="carousel-btn left" onclick="scrollCountries('left')">&#10094;</button>
 
-    <div class="country-carousel" id="countryCarousel">
-      <div class="country-track">
-        <a href="brazil.html" class="country-card">
-          <img src="images/brazil-flag.png" alt="Brazil Flag">
-          <h3>Brazil</h3>
-        </a>
-        <a href="france.html" class="country-card">
-          <img src="images/france-flag.png" alt="France Flag">
-          <h3>France</h3>
-        </a>
-        <a href="japan.html" class="country-card">
-          <img src="images/japan-flag.png" alt="Japan Flag">
-          <h3>Japan</h3>
-        </a>
-        <a href="india.html" class="country-card">
-          <img src="images/india-flag.png" alt="India Flag">
-          <h3>India</h3>
-        </a>
-        <a href="philippines.html" class="country-card">
-          <img src="images/philippine_flag.jpg" alt="Philippines Flag">
-          <h3>Philippines</h3>
-        </a>
-        <a href="italy.html" class="country-card">
-          <img src="https://flagcdn.com/w320/it.png" alt="Italy Flag">
-          <h3>Italy</h3>
-        </a>
-        <a href="thailand.html" class="country-card">
-          <img src="https://flagcdn.com/w320/th.png" alt="Thailand Flag">
-          <h3>Thailand</h3>
-        </a>
-        <a href="mexico.html" class="country-card">
-          <img src="https://flagcdn.com/w320/mx.png" alt="Mexico Flag">
-          <h3>Mexico</h3>
-        </a>
-        <a href="us.html" class="country-card">
-          <img src="https://flagcdn.com/w320/us.png" alt="USA Flag">
-          <h3>United States</h3>
-        </a>
-        <a href="spain.html" class="country-card">
-          <img src="https://flagcdn.com/w320/es.png" alt="Spain Flag">
-          <h3>Spain</h3>
-        </a>
-        <a href="southkorea.html" class="country-card">
-          <img src="https://flagcdn.com/w320/kr.png" alt="South Korea Flag">
-          <h3>South Korea</h3>
-        </a>
-        <a href="china.html" class="country-card">
-          <img src="https://flagcdn.com/w320/cn.png" alt="China Flag">
-          <h3>China</h3>
-        </a>
+      <div class="country-carousel" id="countryCarousel">
+        <div class="country-track">
+          <a href="brazil.html" class="country-card">
+            <img src="images/brazil-flag.png" alt="Brazil Flag">
+            <h3>Brazil</h3>
+          </a>
+          <a href="france.html" class="country-card">
+            <img src="images/france-flag.png" alt="France Flag">
+            <h3>France</h3>
+          </a>
+          <a href="japan.html" class="country-card">
+            <img src="images/japan-flag.png" alt="Japan Flag">
+            <h3>Japan</h3>
+          </a>
+          <a href="india.html" class="country-card">
+            <img src="images/india-flag.png" alt="India Flag">
+            <h3>India</h3>
+          </a>
+          <a href="philippines.html" class="country-card">
+            <img src="images/philippine_flag.jpg" alt="Philippines Flag">
+            <h3>Philippines</h3>
+          </a>
+          <a href="italy.html" class="country-card">
+            <img src="https://flagcdn.com/w320/it.png" alt="Italy Flag">
+            <h3>Italy</h3>
+          </a>
+          <a href="thailand.html" class="country-card">
+            <img src="https://flagcdn.com/w320/th.png" alt="Thailand Flag">
+            <h3>Thailand</h3>
+          </a>
+          <a href="mexico.html" class="country-card">
+            <img src="https://flagcdn.com/w320/mx.png" alt="Mexico Flag">
+            <h3>Mexico</h3>
+          </a>
+          <a href="us.html" class="country-card">
+            <img src="https://flagcdn.com/w320/us.png" alt="USA Flag">
+            <h3>United States</h3>
+          </a>
+          <a href="spain.html" class="country-card">
+            <img src="https://flagcdn.com/w320/es.png" alt="Spain Flag">
+            <h3>Spain</h3>
+          </a>
+          <a href="southkorea.html" class="country-card">
+            <img src="https://flagcdn.com/w320/kr.png" alt="South Korea Flag">
+            <h3>South Korea</h3>
+          </a>
+          <a href="china.html" class="country-card">
+            <img src="https://flagcdn.com/w320/cn.png" alt="China Flag">
+            <h3>China</h3>
+          </a>
+        </div>
       </div>
+
+      <button class="carousel-btn right" onclick="scrollCountries('right')">&#10095;</button>
     </div>
-
-    <button class="carousel-btn right" onclick="scrollCountries('right')">&#10095;</button>
   </div>
-</div>
 
 
-    <script>
-        function scrollCountries(direction) {
-            const container = document.getElementById('countryCarousel');
-            const scrollAmount = container.offsetWidth;
-            container.scrollBy({
-                left: direction === 'left' ? -scrollAmount : scrollAmount,
-                behavior: 'smooth'
-            });
-        }
-    </script>
+  <script>
+    function scrollCountries(direction) {
+      const container = document.getElementById('countryCarousel');
+      const scrollAmount = container.offsetWidth;
+      container.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  </script>
 
   <section class="latest-recipes">
     <h2 class="section-title">Brazilian Recipes</h2>
@@ -247,6 +247,72 @@
 
     </div>
   </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section about">
+        <h3>Good Recipe, Great Recipe</h3>
+        <p> Sharing delicious dishes from around the world. Taste the flavors of different cultures, all in one place.
+          Discover the joy of cooking, from street food to fine dining recipes. </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="dishes.html">Dishes</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contacts.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Popular Recipes -->
+      <div class="footer-section recipes">
+        <h4>Popular Recipes</h4>
+        <ul>
+          <li><a href="bibimbap.html">Korean Bibimbap</a></li>
+          <li><a href="japchae.html">Sweet Potato Japchae</a></li>
+          <li><a href="kung_pao_chicken.html">Kung Pao Chicken</a></li>
+          <li><a href="peking_duck.html">Peking Duck</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="footer-section newsletter">
+        <h4>Subscribe to Our Newsletter</h4>
+        <p>Get weekly recipes, cooking tips, and more!</p>
+        <form class="newsletter-form" onsubmit="return false;">
+          <input type="email" placeholder="Your email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-section contact">
+        <h4>Contact</h4>
+        <p><i class="fas fa-envelope"></i> contact@recipehub.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Anywhere, Earth</p>
+        <p><i class="fas fa-clock"></i> Mon – Fri: 9AM – 6PM</p>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-section social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Good Recipe, Great Recipe. All rights reserved.</p>
+    </div>
+  </footer>
 
 </body>
 

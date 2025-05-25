@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What The Sigma</title>
+    <link rel="stylesheet" href="styles/recipe.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Good Recipe, Great Recipe</a>
+
+        <nav class="nav-links">
+            <a href="dishes.html">Dishes</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="search-container">
+            <form action="">
+                <input type="search" placeholder="Search here...">
+                <button type="submit" class="search-button">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+
+        <div class="auth-links">
+            <a href="register.html" class="login">Log In</a>
+            <a href="register.html" class="signup">Sign Up</a>
+        </div>
+    </header>
+
+    <div class="country-carousel-wrapper">
+        <h2 class="carousel-title">Explore Recipes by Country</h2>
+
+        <div class="carousel-container">
+            <button class="carousel-btn left" onclick="scrollCountries('left')">&#10094;</button>
+
+            <div class="country-carousel" id="countryCarousel">
+                <div class="country-track">
+                    <a href="brazil.html" class="country-card">
+                        <img src="images/brazil-flag.png" alt="Brazil Flag">
+                        <h3>Brazil</h3>
+                    </a>
+                    <a href="france.html" class="country-card">
+                        <img src="images/france-flag.png" alt="France Flag">
+                        <h3>France</h3>
+                    </a>
+                    <a href="japan.html" class="country-card">
+                        <img src="images/japan-flag.png" alt="Japan Flag">
+                        <h3>Japan</h3>
+                    </a>
+                    <a href="india.html" class="country-card">
+                        <img src="images/india-flag.png" alt="India Flag">
+                        <h3>India</h3>
+                    </a>
+                    <a href="philippines.html" class="country-card">
+                        <img src="images/philippine_flag.jpg" alt="Philippines Flag">
+                        <h3>Philippines</h3>
+                    </a>
+                    <a href="italy.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/it.png" alt="Italy Flag">
+                        <h3>Italy</h3>
+                    </a>
+                    <a href="thailand.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/th.png" alt="Thailand Flag">
+                        <h3>Thailand</h3>
+                    </a>
+                    <a href="mexico.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/mx.png" alt="Mexico Flag">
+                        <h3>Mexico</h3>
+                    </a>
+                    <a href="us.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/us.png" alt="USA Flag">
+                        <h3>United States</h3>
+                    </a>
+                    <a href="spain.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/es.png" alt="Spain Flag">
+                        <h3>Spain</h3>
+                    </a>
+                    <a href="southkorea.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/kr.png" alt="South Korea Flag">
+                        <h3>South Korea</h3>
+                    </a>
+                    <a href="china.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/cn.png" alt="China Flag">
+                        <h3>China</h3>
+                    </a>
+                </div>
+            </div>
+
+            <button class="carousel-btn right" onclick="scrollCountries('right')">&#10095;</button>
+        </div>
+    </div>
+
+
+    <script>
+        function scrollCountries(direction) {
+            const container = document.getElementById('countryCarousel');
+            const scrollAmount = container.offsetWidth;
+            container.scrollBy({
+                left: direction === 'left' ? -scrollAmount : scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+    <section class="recipe-section">
+        <div class="recipe-container">
+            <img src="images/tiramisu.png" alt="Tiramisu">
+            <h1>Tiramisu</h1>
+            <p>Tiramisu is a beloved Italian dessert known for its delicate layers of espresso-soaked ladyfingers and a
+                rich, creamy mascarpone filling. This no-bake classic is both elegant and indulgent—perfect for special
+                occasions or a luxurious treat.</p>
+
+            <h3>Preparation:</h3>
+            <p>25–30 minutes active prep</p>
+
+            <h3>Chill:</h3>
+            <p>4–6 hours (or overnight)</p>
+
+            <h3>Total:</h3>
+            <p>About 30 minutes (plus chilling)</p>
+
+            <h2>Ingredients:</h2>
+            <ul>
+                <li>6 egg yolks</li>
+                <li>3/4 cup (150g) granulated sugar</li>
+                <li>1 cup (240ml) heavy cream</li>
+                <li>1 pound (450g) mascarpone cheese, softened</li>
+                <li>2 cups (480ml) strong brewed espresso or coffee, cooled</li>
+                <li>1/4 cup (60ml) coffee liqueur (optional)</li>
+                <li>1 package ladyfinger biscuits (Savoiardi)</li>
+                <li>Unsweetened cocoa powder, for dusting</li>
+                <li>Dark chocolate shavings (optional)</li>
+            </ul>
+
+            <h2>Instructions:</h2>
+            <ol>
+                <li>In a heatproof bowl over a pot of simmering water (double boiler), whisk together egg yolks and
+                    sugar until pale and thickened (about 8–10 minutes). Remove from heat and let cool slightly.</li>
+
+                <li>In a separate bowl, whip the heavy cream to stiff peaks.</li>
+
+                <li>In another bowl, beat the mascarpone until smooth. Gently fold the whipped cream into the
+                    mascarpone, then fold in the cooled egg yolk mixture until fully combined and creamy.</li>
+
+                <li>In a shallow dish, combine the espresso and coffee liqueur (if using).</li>
+
+                <li>Quickly dip each ladyfinger into the coffee mixture (do not soak), and arrange in a single layer in
+                    a 9x13-inch dish or similar.</li>
+
+                <li>Spread half of the mascarpone mixture over the ladyfingers. Repeat with another layer of dipped
+                    ladyfingers and the remaining mascarpone cream.</li>
+
+                <li>Cover and refrigerate for at least 4–6 hours, preferably overnight, to allow flavors to meld.</li>
+
+                <li>Before serving, dust generously with cocoa powder and garnish with chocolate shavings if desired.
+                </li>
+            </ol>
+
+            <div class="home-button-container">
+                <a href="index.html" class="home-button">Return Home</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What The Sigma</title>
+    <link rel="stylesheet" href="styles/recipe.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Good Recipe, Great Recipe</a>
+
+        <nav class="nav-links">
+            <a href="dishes.html">Dishes</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="search-container">
+            <form action="">
+                <input type="search" placeholder="Search here...">
+                <button type="submit" class="search-button">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+
+        <div class="auth-links">
+            <a href="register.html" class="login">Log In</a>
+            <a href="register.html" class="signup">Sign Up</a>
+        </div>
+    </header>
+
+    <div class="country-carousel-wrapper">
+        <h2 class="carousel-title">Explore Recipes by Country</h2>
+
+        <div class="carousel-container">
+            <button class="carousel-btn left" onclick="scrollCountries('left')">&#10094;</button>
+
+            <div class="country-carousel" id="countryCarousel">
+                <div class="country-track">
+                    <a href="brazil.html" class="country-card">
+                        <img src="images/brazil-flag.png" alt="Brazil Flag">
+                        <h3>Brazil</h3>
+                    </a>
+                    <a href="france.html" class="country-card">
+                        <img src="images/france-flag.png" alt="France Flag">
+                        <h3>France</h3>
+                    </a>
+                    <a href="japan.html" class="country-card">
+                        <img src="images/japan-flag.png" alt="Japan Flag">
+                        <h3>Japan</h3>
+                    </a>
+                    <a href="india.html" class="country-card">
+                        <img src="images/india-flag.png" alt="India Flag">
+                        <h3>India</h3>
+                    </a>
+                    <a href="philippines.html" class="country-card">
+                        <img src="images/philippine_flag.jpg" alt="Philippines Flag">
+                        <h3>Philippines</h3>
+                    </a>
+                    <a href="italy.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/it.png" alt="Italy Flag">
+                        <h3>Italy</h3>
+                    </a>
+                    <a href="thailand.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/th.png" alt="Thailand Flag">
+                        <h3>Thailand</h3>
+                    </a>
+                    <a href="mexico.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/mx.png" alt="Mexico Flag">
+                        <h3>Mexico</h3>
+                    </a>
+                    <a href="us.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/us.png" alt="USA Flag">
+                        <h3>United States</h3>
+                    </a>
+                    <a href="spain.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/es.png" alt="Spain Flag">
+                        <h3>Spain</h3>
+                    </a>
+                    <a href="southkorea.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/kr.png" alt="South Korea Flag">
+                        <h3>South Korea</h3>
+                    </a>
+                    <a href="china.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/cn.png" alt="China Flag">
+                        <h3>China</h3>
+                    </a>
+                </div>
+            </div>
+
+            <button class="carousel-btn right" onclick="scrollCountries('right')">&#10095;</button>
+        </div>
+    </div>
+
+
+    <script>
+        function scrollCountries(direction) {
+            const container = document.getElementById('countryCarousel');
+            const scrollAmount = container.offsetWidth;
+            container.scrollBy({
+                left: direction === 'left' ? -scrollAmount : scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+    <section class="recipe-section">
+        <div class="recipe-container">
+            <img src="images/guacamole.png" alt="Guacamole">
+            <h1>Guacamole</h1>
+            <p>
+                Guacamole is a classic Mexican avocado-based dip that’s fresh, creamy, tangy, and loaded with flavor.
+                It’s perfect as a dip for tortilla chips, a topping for tacos, or a spread for sandwiches and burgers.
+            </p>
+
+            <h3>Preparation:</h3>
+            <p>10 minutes</p>
+
+            <h3>Cook:</h3>
+            <p>None</p>
+
+            <h3>Total:</h3>
+            <p>10 minutes</p>
+
+            <h2>Ingredients:</h2>
+            <ul>
+                <li>3 ripe avocados</li>
+                <li>1 small onion, finely chopped</li>
+                <li>1 medium tomato, diced</li>
+                <li>1–2 cloves garlic, minced</li>
+                <li>1–2 tablespoons lime juice (to taste)</li>
+                <li>1 fresh jalapeño or serrano chile, finely chopped (optional)</li>
+                <li>2 tablespoons fresh cilantro, chopped</li>
+                <li>Salt, to taste</li>
+                <li>Freshly ground black pepper (optional)</li>
+            </ul>
+
+            <h2>Instructions:</h2>
+            <ol>
+                <li>Cut the avocados in half, remove the pits, and scoop the flesh into a mixing bowl.</li>
+
+                <li>Use a fork or potato masher to mash the avocados to your desired consistency—chunky or smooth.</li>
+
+                <li>Add the onion, tomato, garlic, lime juice, chopped chile (if using), and cilantro. Mix well to
+                    combine.</li>
+
+                <li>Season with salt and pepper to taste. Adjust lime juice or salt as needed for balance.</li>
+
+                <li>Serve immediately with tortilla chips or as a topping. If storing, press plastic wrap directly
+                    against the surface to prevent browning and refrigerate for up to 1 day.</li>
+            </ol>
+
+
+    <div class="home-button-container">
+        <a href="index.html" class="home-button">Return Home</a>
+    </div>
+    </div>
+    </section>
+
+</body>
+
+</html>

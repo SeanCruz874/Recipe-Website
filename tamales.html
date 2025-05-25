@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What The Sigma</title>
+    <link rel="stylesheet" href="styles/recipe.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Good Recipe, Great Recipe</a>
+
+        <nav class="nav-links">
+            <a href="dishes.html">Dishes</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="search-container">
+            <form action="">
+                <input type="search" placeholder="Search here...">
+                <button type="submit" class="search-button">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+
+        <div class="auth-links">
+            <a href="register.html" class="login">Log In</a>
+            <a href="register.html" class="signup">Sign Up</a>
+        </div>
+    </header>
+
+    <div class="country-carousel-wrapper">
+        <h2 class="carousel-title">Explore Recipes by Country</h2>
+
+        <div class="carousel-container">
+            <button class="carousel-btn left" onclick="scrollCountries('left')">&#10094;</button>
+
+            <div class="country-carousel" id="countryCarousel">
+                <div class="country-track">
+                    <a href="brazil.html" class="country-card">
+                        <img src="images/brazil-flag.png" alt="Brazil Flag">
+                        <h3>Brazil</h3>
+                    </a>
+                    <a href="france.html" class="country-card">
+                        <img src="images/france-flag.png" alt="France Flag">
+                        <h3>France</h3>
+                    </a>
+                    <a href="japan.html" class="country-card">
+                        <img src="images/japan-flag.png" alt="Japan Flag">
+                        <h3>Japan</h3>
+                    </a>
+                    <a href="india.html" class="country-card">
+                        <img src="images/india-flag.png" alt="India Flag">
+                        <h3>India</h3>
+                    </a>
+                    <a href="philippines.html" class="country-card">
+                        <img src="images/philippine_flag.jpg" alt="Philippines Flag">
+                        <h3>Philippines</h3>
+                    </a>
+                    <a href="italy.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/it.png" alt="Italy Flag">
+                        <h3>Italy</h3>
+                    </a>
+                    <a href="thailand.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/th.png" alt="Thailand Flag">
+                        <h3>Thailand</h3>
+                    </a>
+                    <a href="mexico.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/mx.png" alt="Mexico Flag">
+                        <h3>Mexico</h3>
+                    </a>
+                    <a href="us.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/us.png" alt="USA Flag">
+                        <h3>United States</h3>
+                    </a>
+                    <a href="spain.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/es.png" alt="Spain Flag">
+                        <h3>Spain</h3>
+                    </a>
+                    <a href="southkorea.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/kr.png" alt="South Korea Flag">
+                        <h3>South Korea</h3>
+                    </a>
+                    <a href="china.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/cn.png" alt="China Flag">
+                        <h3>China</h3>
+                    </a>
+                </div>
+            </div>
+
+            <button class="carousel-btn right" onclick="scrollCountries('right')">&#10095;</button>
+        </div>
+    </div>
+
+
+    <script>
+        function scrollCountries(direction) {
+            const container = document.getElementById('countryCarousel');
+            const scrollAmount = container.offsetWidth;
+            container.scrollBy({
+                left: direction === 'left' ? -scrollAmount : scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+    <section class="recipe-section">
+        <div class="recipe-container">
+            <img src="images/tamales.png" alt="Tamales">
+            <h1>Tamales</h1>
+            <p>
+                Tamales are a beloved Mexican dish made from masa (corn dough) filled with meats, cheese, or vegetables,
+                then wrapped in corn husks and steamed. Often enjoyed during holidays and celebrations, they are both
+                comforting and festive.
+            </p>
+
+            <h3>Preparation:</h3>
+            <p>1–1.5 hours (including soaking and dough preparation)</p>
+
+            <h3>Cook:</h3>
+            <p>1.5–2 hours steaming</p>
+
+            <h3>Total:</h3>
+            <p>2.5–3.5 hours</p>
+
+            <h2>Ingredients:</h2>
+            <ul>
+                <li>30 dried corn husks (plus extras in case of tearing)</li>
+                <li>4 cups masa harina</li>
+                <li>2.5–3 cups warm chicken broth or water</li>
+                <li>1.5 teaspoons baking powder</li>
+                <li>1 teaspoon salt</li>
+                <li>1 cup lard or vegetable shortening, whipped</li>
+                <li>3–4 cups filling of choice (shredded pork with red chile sauce, green chicken, cheese and jalapeño,
+                    etc.)</li>
+            </ul>
+
+            <h2>Instructions:</h2>
+            <ol>
+                <li>Soak the corn husks in warm water for 30–60 minutes until soft and pliable. Drain and pat dry.</li>
+
+                <li>In a large bowl, mix masa harina, baking powder, and salt. Gradually add warm broth, mixing until a
+                    dough forms. Beat in whipped lard or shortening until light and fluffy. Dough should be soft but not
+                    sticky.</li>
+
+                <li>To assemble, spread about 2 tablespoons of masa onto the center of a husk, leaving space on the
+                    sides and top. Add about 1 tablespoon of filling in the center.</li>
+
+                <li>Fold the sides of the husk inward, then fold the bottom up to seal. Tie with a strip of husk if
+                    needed. Repeat with remaining ingredients.</li>
+
+                <li>Arrange tamales upright in a steamer basket, open end up. Cover with extra husks or a damp towel.
+                    Steam over gently boiling water for 1.5 to 2 hours, adding water as needed to prevent drying out.
+                </li>
+
+                <li>Check for doneness by peeling one open — the masa should pull away from the husk cleanly and be
+                    fully cooked through.</li>
+
+                <li>Let rest for a few minutes before serving. Serve with salsa, crema, or your favorite toppings.</li>
+            </ol>
+            
+    <div class="home-button-container">
+        <a href="index.html" class="home-button">Return Home</a>
+    </div>
+    </div>
+    </section>
+
+</body>
+
+</html>

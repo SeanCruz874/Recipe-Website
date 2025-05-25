@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What The Sigma</title>
+    <link rel="stylesheet" href="styles/recipe.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Good Recipe, Great Recipe</a>
+
+        <nav class="nav-links">
+            <a href="dishes.html">Dishes</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="search-container">
+            <form action="">
+                <input type="search" placeholder="Search here...">
+                <button type="submit" class="search-button">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+
+        <div class="auth-links">
+            <a href="register.html" class="login">Log In</a>
+            <a href="register.html" class="signup">Sign Up</a>
+        </div>
+    </header>
+
+    <div class="country-carousel-wrapper">
+        <h2 class="carousel-title">Explore Recipes by Country</h2>
+
+        <div class="carousel-container">
+            <button class="carousel-btn left" onclick="scrollCountries('left')">&#10094;</button>
+
+            <div class="country-carousel" id="countryCarousel">
+                <div class="country-track">
+                    <a href="brazil.html" class="country-card">
+                        <img src="images/brazil-flag.png" alt="Brazil Flag">
+                        <h3>Brazil</h3>
+                    </a>
+                    <a href="france.html" class="country-card">
+                        <img src="images/france-flag.png" alt="France Flag">
+                        <h3>France</h3>
+                    </a>
+                    <a href="japan.html" class="country-card">
+                        <img src="images/japan-flag.png" alt="Japan Flag">
+                        <h3>Japan</h3>
+                    </a>
+                    <a href="india.html" class="country-card">
+                        <img src="images/india-flag.png" alt="India Flag">
+                        <h3>India</h3>
+                    </a>
+                    <a href="philippines.html" class="country-card">
+                        <img src="images/philippine_flag.jpg" alt="Philippines Flag">
+                        <h3>Philippines</h3>
+                    </a>
+                    <a href="italy.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/it.png" alt="Italy Flag">
+                        <h3>Italy</h3>
+                    </a>
+                    <a href="thailand.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/th.png" alt="Thailand Flag">
+                        <h3>Thailand</h3>
+                    </a>
+                    <a href="mexico.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/mx.png" alt="Mexico Flag">
+                        <h3>Mexico</h3>
+                    </a>
+                    <a href="us.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/us.png" alt="USA Flag">
+                        <h3>United States</h3>
+                    </a>
+                    <a href="spain.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/es.png" alt="Spain Flag">
+                        <h3>Spain</h3>
+                    </a>
+                    <a href="southkorea.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/kr.png" alt="South Korea Flag">
+                        <h3>South Korea</h3>
+                    </a>
+                    <a href="china.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/cn.png" alt="China Flag">
+                        <h3>China</h3>
+                    </a>
+                </div>
+            </div>
+
+            <button class="carousel-btn right" onclick="scrollCountries('right')">&#10095;</button>
+        </div>
+    </div>
+
+
+    <script>
+        function scrollCountries(direction) {
+            const container = document.getElementById('countryCarousel');
+            const scrollAmount = container.offsetWidth;
+            container.scrollBy({
+                left: direction === 'left' ? -scrollAmount : scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+    <section class="recipe-section">
+        <div class="recipe-container">
+            <img src="images/tortilla_espanola.png" alt="Tortilla Española">
+            <h1>Tortilla Española</h1>
+            <p>
+                A beloved Spanish classic, Tortilla Española (Spanish omelette) is a simple yet satisfying dish made
+                with eggs, potatoes, and onions. It's perfect for breakfast, lunch, or as a tapa.
+            </p>
+
+            <h3>Preparation:</h3>
+            <p>15 minutes</p>
+
+            <h3>Cook:</h3>
+            <p>25–30 minutes</p>
+
+            <h3>Total:</h3>
+            <p>40–45 minutes</p>
+
+            <h2>Ingredients:</h2>
+            <ul>
+                <li>4 medium potatoes (about 1 lb / 450g), peeled and thinly sliced</li>
+                <li>1 medium onion, thinly sliced</li>
+                <li>6 large eggs</li>
+                <li>¾ cup (180ml) olive oil (for frying)</li>
+                <li>Salt, to taste</li>
+            </ul>
+
+            <h2>Instructions:</h2>
+            <ol>
+                <li>Heat olive oil in a nonstick or cast iron pan over medium heat.</li>
+                <li>Add sliced potatoes and onions, season with salt, and cook gently for about 15–20 minutes, stirring
+                    occasionally, until soft but not browned.</li>
+                <li>Drain the potatoes and onions using a slotted spoon and set aside. Reserve some oil for cooking the
+                    tortilla.</li>
+                <li>In a large bowl, beat the eggs and add the cooked potatoes and onions. Stir gently to combine. Let
+                    it sit for a few minutes.</li>
+                <li>Heat 1–2 tablespoons of the reserved oil in the pan over medium-low heat. Pour in the egg mixture
+                    and spread it evenly.</li>
+                <li>Cook for 6–8 minutes until mostly set, gently shaking the pan to prevent sticking. Use a spatula to
+                    loosen the edges.</li>
+                <li>Carefully flip the tortilla using a plate: place a plate over the pan, invert the tortilla onto the
+                    plate, then slide it back into the pan to cook the other side for 4–5 minutes.</li>
+                <li>Once fully set and lightly golden, transfer to a plate. Let it rest a few minutes before slicing.
+                </li>
+                <li>Serve warm, at room temperature, or chilled — great on its own or with a side salad.</li>
+            </ol>
+
+            <div class="home-button-container">
+                <a href="index.html" class="home-button">Return Home</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

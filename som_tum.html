@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What The Sigma</title>
+    <link rel="stylesheet" href="styles/recipe.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Good Recipe, Great Recipe</a>
+
+        <nav class="nav-links">
+            <a href="dishes.html">Dishes</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="search-container">
+            <form action="">
+                <input type="search" placeholder="Search here...">
+                <button type="submit" class="search-button">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+
+        <div class="auth-links">
+            <a href="register.html" class="login">Log In</a>
+            <a href="register.html" class="signup">Sign Up</a>
+        </div>
+    </header>
+
+    <div class="country-carousel-wrapper">
+        <h2 class="carousel-title">Explore Recipes by Country</h2>
+
+        <div class="carousel-container">
+            <button class="carousel-btn left" onclick="scrollCountries('left')">&#10094;</button>
+
+            <div class="country-carousel" id="countryCarousel">
+                <div class="country-track">
+                    <a href="brazil.html" class="country-card">
+                        <img src="images/brazil-flag.png" alt="Brazil Flag">
+                        <h3>Brazil</h3>
+                    </a>
+                    <a href="france.html" class="country-card">
+                        <img src="images/france-flag.png" alt="France Flag">
+                        <h3>France</h3>
+                    </a>
+                    <a href="japan.html" class="country-card">
+                        <img src="images/japan-flag.png" alt="Japan Flag">
+                        <h3>Japan</h3>
+                    </a>
+                    <a href="india.html" class="country-card">
+                        <img src="images/india-flag.png" alt="India Flag">
+                        <h3>India</h3>
+                    </a>
+                    <a href="philippines.html" class="country-card">
+                        <img src="images/philippine_flag.jpg" alt="Philippines Flag">
+                        <h3>Philippines</h3>
+                    </a>
+                    <a href="italy.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/it.png" alt="Italy Flag">
+                        <h3>Italy</h3>
+                    </a>
+                    <a href="thailand.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/th.png" alt="Thailand Flag">
+                        <h3>Thailand</h3>
+                    </a>
+                    <a href="mexico.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/mx.png" alt="Mexico Flag">
+                        <h3>Mexico</h3>
+                    </a>
+                    <a href="us.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/us.png" alt="USA Flag">
+                        <h3>United States</h3>
+                    </a>
+                    <a href="spain.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/es.png" alt="Spain Flag">
+                        <h3>Spain</h3>
+                    </a>
+                    <a href="southkorea.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/kr.png" alt="South Korea Flag">
+                        <h3>South Korea</h3>
+                    </a>
+                    <a href="china.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/cn.png" alt="China Flag">
+                        <h3>China</h3>
+                    </a>
+                </div>
+            </div>
+
+            <button class="carousel-btn right" onclick="scrollCountries('right')">&#10095;</button>
+        </div>
+    </div>
+
+
+    <script>
+        function scrollCountries(direction) {
+            const container = document.getElementById('countryCarousel');
+            const scrollAmount = container.offsetWidth;
+            container.scrollBy({
+                left: direction === 'left' ? -scrollAmount : scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+    <section class="recipe-section">
+        <div class="recipe-container">
+            <img src="images/som_tum.jpg" alt="Som Tum - Thai Green Papaya Salad">
+            <h1>Som Tum</h1>
+            <p>Som Tum is a vibrant and spicy Thai green papaya salad made with shredded unripe papaya, lime juice,
+                chili, fish sauce, and peanuts. It’s sweet, sour, salty, and crunchy — a refreshing side or light main
+                dish packed with bold Southeast Asian flavors.</p>
+
+            <h3>Preparation:</h3>
+            <p>15 minutes</p>
+
+            <h3>Cook:</h3>
+            <p>None</p>
+
+            <h3>Total:</h3>
+            <p>15 minutes</p>
+
+            <h2>Ingredients:</h2>
+            <ul>
+                <li>2 cups shredded green papaya</li>
+                <li>1 medium carrot, julienned (optional)</li>
+                <li>1/2 cup cherry tomatoes, halved</li>
+                <li>1/4 cup green beans, cut into 1-inch pieces</li>
+                <li>2 tablespoons roasted peanuts, crushed</li>
+                <li>2–3 cloves garlic</li>
+                <li>2–3 Thai bird’s eye chilies (adjust to taste)</li>
+                <li>1–2 tablespoons fish sauce (or soy sauce for vegetarian)</li>
+                <li>1–2 tablespoons lime juice</li>
+                <li>1 tablespoon palm sugar or brown sugar</li>
+            </ul>
+
+            <h2>Instructions:</h2>
+            <ol>
+                <li>In a mortar and pestle, pound the garlic and chilies together to form a rough paste.</li>
+
+                <li>Add sugar, lime juice, and fish sauce. Mix well until sugar is dissolved.</li>
+
+                <li>Add the green beans and lightly crush them with the pestle.</li>
+
+                <li>Add shredded papaya, tomatoes, and carrots (if using). Gently pound and mix everything together
+                    until combined and coated with the dressing.</li>
+
+                <li>Stir in crushed peanuts.</li>
+
+                <li>Taste and adjust seasoning with more lime juice, sugar, or fish sauce as desired.</li>
+
+                <li>Serve immediately as a fresh, crunchy salad or side dish. Pairs well with sticky rice and grilled
+                    meats.</li>
+            </ol>
+
+    <div class="home-button-container">
+        <a href="index.html" class="home-button">Return Home</a>
+    </div>
+    </div>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What The Sigma</title>
+    <link rel="stylesheet" href="styles/recipe.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Good Recipe, Great Recipe</a>
+
+        <nav class="nav-links">
+            <a href="dishes.html">Dishes</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="search-container">
+            <form action="">
+                <input type="search" placeholder="Search here...">
+                <button type="submit" class="search-button">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+
+        <div class="auth-links">
+            <a href="register.html" class="login">Log In</a>
+            <a href="register.html" class="signup">Sign Up</a>
+        </div>
+    </header>
+
+    <div class="country-carousel-wrapper">
+        <h2 class="carousel-title">Explore Recipes by Country</h2>
+
+        <div class="carousel-container">
+            <button class="carousel-btn left" onclick="scrollCountries('left')">&#10094;</button>
+
+            <div class="country-carousel" id="countryCarousel">
+                <div class="country-track">
+                    <a href="brazil.html" class="country-card">
+                        <img src="images/brazil-flag.png" alt="Brazil Flag">
+                        <h3>Brazil</h3>
+                    </a>
+                    <a href="france.html" class="country-card">
+                        <img src="images/france-flag.png" alt="France Flag">
+                        <h3>France</h3>
+                    </a>
+                    <a href="japan.html" class="country-card">
+                        <img src="images/japan-flag.png" alt="Japan Flag">
+                        <h3>Japan</h3>
+                    </a>
+                    <a href="india.html" class="country-card">
+                        <img src="images/india-flag.png" alt="India Flag">
+                        <h3>India</h3>
+                    </a>
+                    <a href="philippines.html" class="country-card">
+                        <img src="images/philippine_flag.jpg" alt="Philippines Flag">
+                        <h3>Philippines</h3>
+                    </a>
+                    <a href="italy.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/it.png" alt="Italy Flag">
+                        <h3>Italy</h3>
+                    </a>
+                    <a href="thailand.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/th.png" alt="Thailand Flag">
+                        <h3>Thailand</h3>
+                    </a>
+                    <a href="mexico.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/mx.png" alt="Mexico Flag">
+                        <h3>Mexico</h3>
+                    </a>
+                    <a href="us.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/us.png" alt="USA Flag">
+                        <h3>United States</h3>
+                    </a>
+                    <a href="spain.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/es.png" alt="Spain Flag">
+                        <h3>Spain</h3>
+                    </a>
+                    <a href="southkorea.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/kr.png" alt="South Korea Flag">
+                        <h3>South Korea</h3>
+                    </a>
+                    <a href="china.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/cn.png" alt="China Flag">
+                        <h3>China</h3>
+                    </a>
+                </div>
+            </div>
+
+            <button class="carousel-btn right" onclick="scrollCountries('right')">&#10095;</button>
+        </div>
+    </div>
+
+
+    <script>
+        function scrollCountries(direction) {
+            const container = document.getElementById('countryCarousel');
+            const scrollAmount = container.offsetWidth;
+            container.scrollBy({
+                left: direction === 'left' ? -scrollAmount : scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+    <section class="recipe-section">
+        <div class="recipe-container">
+            <img src="images/pad_thai.jpg" alt="Pad Thai">
+            <h1>Pad Thai</h1>
+            <p>Pad Thai is Thailand’s iconic stir-fried noodle dish, combining chewy rice noodles, tangy tamarind sauce,
+                crisp vegetables, and tender protein—topped with crunchy peanuts and fresh lime. It's the perfect
+                balance of sweet, sour, salty, and savory.</p>
+
+            <h3>Preparation:</h3>
+            <p>15–20 minutes</p>
+
+            <h3>Cook:</h3>
+            <p>10–15 minutes</p>
+
+            <h3>Total:</h3>
+            <p>30–35 minutes</p>
+
+            <h2>Ingredients:</h2>
+            <ul>
+                <li>8 ounces (225g) flat rice noodles</li>
+                <li>2 tablespoons oil (vegetable or peanut)</li>
+                <li>2 cloves garlic, minced</li>
+                <li>1 shallot, finely chopped</li>
+                <li>2 eggs, lightly beaten</li>
+                <li>8 ounces (225g) shrimp, chicken, or tofu</li>
+                <li>1 cup bean sprouts</li>
+                <li>3 green onions, chopped</li>
+                <li>1/4 cup crushed peanuts</li>
+                <li>2 tablespoons chopped cilantro (optional)</li>
+                <li>Lime wedges, for serving</li>
+            </ul>
+
+            <h3>For the sauce:</h3>
+            <ul>
+                <li>3 tablespoons fish sauce (or soy sauce for vegetarian)</li>
+                <li>1 tablespoon tamarind paste</li>
+                <li>1 tablespoon sugar (palm sugar preferred)</li>
+                <li>1–2 teaspoons chili flakes (optional, to taste)</li>
+            </ul>
+
+            <h2>Instructions:</h2>
+            <ol>
+                <li>Soak the rice noodles in warm water for about 20–30 minutes, or until pliable. Drain and set aside.
+                </li>
+
+                <li>In a small bowl, mix the fish sauce, tamarind paste, sugar, and chili flakes. Set the sauce aside.
+                </li>
+
+                <li>Heat oil in a wok or large pan over medium-high heat. Sauté garlic and shallots until fragrant.</li>
+
+                <li>Add shrimp, chicken, or tofu and stir-fry until cooked through.</li>
+
+                <li>Push everything to the side, pour in the eggs, and scramble them gently.</li>
+
+                <li>Add the drained noodles and pour in the prepared sauce. Toss everything together until evenly coated
+                    and the noodles are tender (add a splash of water if needed).</li>
+
+                <li>Stir in bean sprouts and green onions. Cook for 1–2 more minutes.</li>
+
+                <li>Plate the Pad Thai and top with crushed peanuts, cilantro (if using), and lime wedges.</li>
+            </ol>
+
+
+    <div class="home-button-container">
+        <a href="index.html" class="home-button">Return Home</a>
+    </div>
+    </div>
+    </section>
+
+</body>
+
+</html>

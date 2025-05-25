@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What The Sigma</title>
+    <link rel="stylesheet" href="styles/recipe.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Good Recipe, Great Recipe</a>
+
+        <nav class="nav-links">
+            <a href="dishes.html">Dishes</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="search-container">
+            <form action="">
+                <input type="search" placeholder="Search here...">
+                <button type="submit" class="search-button">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+
+        <div class="auth-links">
+            <a href="register.html" class="login">Log In</a>
+            <a href="register.html" class="signup">Sign Up</a>
+        </div>
+    </header>
+
+    <div class="country-carousel-wrapper">
+        <h2 class="carousel-title">Explore Recipes by Country</h2>
+
+        <div class="carousel-container">
+            <button class="carousel-btn left" onclick="scrollCountries('left')">&#10094;</button>
+
+            <div class="country-carousel" id="countryCarousel">
+                <div class="country-track">
+                    <a href="brazil.html" class="country-card">
+                        <img src="images/brazil-flag.png" alt="Brazil Flag">
+                        <h3>Brazil</h3>
+                    </a>
+                    <a href="france.html" class="country-card">
+                        <img src="images/france-flag.png" alt="France Flag">
+                        <h3>France</h3>
+                    </a>
+                    <a href="japan.html" class="country-card">
+                        <img src="images/japan-flag.png" alt="Japan Flag">
+                        <h3>Japan</h3>
+                    </a>
+                    <a href="india.html" class="country-card">
+                        <img src="images/india-flag.png" alt="India Flag">
+                        <h3>India</h3>
+                    </a>
+                    <a href="philippines.html" class="country-card">
+                        <img src="images/philippine_flag.jpg" alt="Philippines Flag">
+                        <h3>Philippines</h3>
+                    </a>
+                    <a href="italy.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/it.png" alt="Italy Flag">
+                        <h3>Italy</h3>
+                    </a>
+                    <a href="thailand.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/th.png" alt="Thailand Flag">
+                        <h3>Thailand</h3>
+                    </a>
+                    <a href="mexico.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/mx.png" alt="Mexico Flag">
+                        <h3>Mexico</h3>
+                    </a>
+                    <a href="us.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/us.png" alt="USA Flag">
+                        <h3>United States</h3>
+                    </a>
+                    <a href="spain.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/es.png" alt="Spain Flag">
+                        <h3>Spain</h3>
+                    </a>
+                    <a href="southkorea.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/kr.png" alt="South Korea Flag">
+                        <h3>South Korea</h3>
+                    </a>
+                    <a href="china.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/cn.png" alt="China Flag">
+                        <h3>China</h3>
+                    </a>
+                </div>
+            </div>
+
+            <button class="carousel-btn right" onclick="scrollCountries('right')">&#10095;</button>
+        </div>
+    </div>
+
+
+    <script>
+        function scrollCountries(direction) {
+            const container = document.getElementById('countryCarousel');
+            const scrollAmount = container.offsetWidth;
+            container.scrollBy({
+                left: direction === 'left' ? -scrollAmount : scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+    <section class="recipe-section">
+        <div class="recipe-container">
+            <img src="images/japchae.png" alt="Japchae">
+            <h1>Japchae</h1>
+            <p>
+                Japchae is a beloved Korean noodle dish made from sweet potato starch noodles stir-fried with a colorful
+                mix of vegetables and seasoned beef. Lightly sweet and savory, it’s served warm or at room temperature,
+                making it perfect for any occasion.
+            </p>
+
+            <div class="recipe-times">
+                <h3>Preparation:</h3>
+                <p>20–25 minutes</p>
+
+                <h3>Cook:</h3>
+                <p>15–20 minutes</p>
+
+                <h3>Total:</h3>
+                <p>35–45 minutes</p>
+            </div>
+
+            <h2>Ingredients:</h2>
+            <ul>
+                <li>200g (7 oz) sweet potato noodles (dangmyeon)</li>
+                <li>150g (5 oz) beef (ribeye or sirloin), thinly sliced</li>
+                <li>1 tablespoon soy sauce (for beef)</li>
+                <li>1 teaspoon sesame oil (for beef)</li>
+                <li>1 clove garlic, minced</li>
+                <li>1 small carrot, julienned</li>
+                <li>1/2 red bell pepper, thinly sliced</li>
+                <li>1/2 onion, thinly sliced</li>
+                <li>1 cup spinach, blanched and squeezed</li>
+                <li>4–5 shiitake mushrooms, sliced</li>
+                <li>2 eggs, beaten and cooked into a thin omelet, sliced into strips (optional)</li>
+                <li>2 tablespoons soy sauce (for seasoning)</li>
+                <li>1 tablespoon sugar</li>
+                <li>1 tablespoon sesame oil (for noodles)</li>
+                <li>Sesame seeds, for garnish</li>
+                <li>Vegetable oil for cooking</li>
+            </ul>
+
+            <h2>Instructions:</h2>
+            <ol>
+                <li>Marinate beef with 1 tablespoon soy sauce, 1 teaspoon sesame oil, and minced garlic. Set aside for
+                    10–15 minutes.</li>
+                <li>Cook sweet potato noodles according to package instructions. Drain and rinse with cold water. Toss
+                    with 1 tablespoon sesame oil to prevent sticking.</li>
+                <li>Individually stir-fry the vegetables in a lightly oiled pan with a pinch of salt, then set aside.
+                </li>
+                <li>Cook the marinated beef until fully browned and cooked through. Set aside.</li>
+                <li>In a large pan or bowl, combine noodles, cooked vegetables, beef, soy sauce, and sugar. Toss
+                    together over low heat or by hand until everything is evenly mixed and warmed.</li>
+                <li>Top with egg strips (if using) and sesame seeds before serving.</li>
+                <li>Serve warm or at room temperature.</li>
+            </ol>
+        </div>
+    </section>
+
+    <div class="home-button-container">
+        <a href="index.html" class="home-button">Return Home</a>
+    </div>
+    </div>
+    </section>
+
+</body>
+
+</html>

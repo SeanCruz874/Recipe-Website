@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What The Sigma</title>
+    <link rel="stylesheet" href="styles/recipe.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Good Recipe, Great Recipe</a>
+
+        <nav class="nav-links">
+            <a href="dishes.html">Dishes</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="search-container">
+            <form action="">
+                <input type="search" placeholder="Search here...">
+                <button type="submit" class="search-button">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+
+        <div class="auth-links">
+            <a href="register.html" class="login">Log In</a>
+            <a href="register.html" class="signup">Sign Up</a>
+        </div>
+    </header>
+
+    <div class="country-carousel-wrapper">
+        <h2 class="carousel-title">Explore Recipes by Country</h2>
+
+        <div class="carousel-container">
+            <button class="carousel-btn left" onclick="scrollCountries('left')">&#10094;</button>
+
+            <div class="country-carousel" id="countryCarousel">
+                <div class="country-track">
+                    <a href="brazil.html" class="country-card">
+                        <img src="images/brazil-flag.png" alt="Brazil Flag">
+                        <h3>Brazil</h3>
+                    </a>
+                    <a href="france.html" class="country-card">
+                        <img src="images/france-flag.png" alt="France Flag">
+                        <h3>France</h3>
+                    </a>
+                    <a href="japan.html" class="country-card">
+                        <img src="images/japan-flag.png" alt="Japan Flag">
+                        <h3>Japan</h3>
+                    </a>
+                    <a href="india.html" class="country-card">
+                        <img src="images/india-flag.png" alt="India Flag">
+                        <h3>India</h3>
+                    </a>
+                    <a href="philippines.html" class="country-card">
+                        <img src="images/philippine_flag.jpg" alt="Philippines Flag">
+                        <h3>Philippines</h3>
+                    </a>
+                    <a href="italy.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/it.png" alt="Italy Flag">
+                        <h3>Italy</h3>
+                    </a>
+                    <a href="thailand.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/th.png" alt="Thailand Flag">
+                        <h3>Thailand</h3>
+                    </a>
+                    <a href="mexico.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/mx.png" alt="Mexico Flag">
+                        <h3>Mexico</h3>
+                    </a>
+                    <a href="us.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/us.png" alt="USA Flag">
+                        <h3>United States</h3>
+                    </a>
+                    <a href="spain.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/es.png" alt="Spain Flag">
+                        <h3>Spain</h3>
+                    </a>
+                    <a href="southkorea.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/kr.png" alt="South Korea Flag">
+                        <h3>South Korea</h3>
+                    </a>
+                    <a href="china.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/cn.png" alt="China Flag">
+                        <h3>China</h3>
+                    </a>
+                </div>
+            </div>
+
+            <button class="carousel-btn right" onclick="scrollCountries('right')">&#10095;</button>
+        </div>
+    </div>
+
+
+    <script>
+        function scrollCountries(direction) {
+            const container = document.getElementById('countryCarousel');
+            const scrollAmount = container.offsetWidth;
+            container.scrollBy({
+                left: direction === 'left' ? -scrollAmount : scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+    <section class="recipe-section">
+        <div class="recipe-container">
+            <img src="images/churros.png" alt="Churros">
+            <h1>Churros</h1>
+            <p>
+                Churros are crispy, golden sticks of fried dough coated in cinnamon sugar and often served with rich
+                chocolate sauce. A popular street treat in Spain and Latin America, churros are easy to make at home and
+                perfect for a sweet indulgence.
+            </p>
+
+            <h3>Preparation:</h3>
+            <p>15 minutes</p>
+
+            <h3>Cook:</h3>
+            <p>20 minutes</p>
+
+            <h3>Total:</h3>
+            <p>35 minutes</p>
+
+            <h2>Ingredients:</h2>
+            <ul>
+                <li>1 cup water</li>
+                <li>2½ tablespoons sugar</li>
+                <li>½ teaspoon salt</li>
+                <li>2 tablespoons vegetable oil</li>
+                <li>1 cup all-purpose flour</li>
+                <li>Oil for frying (vegetable or canola)</li>
+                <li>½ cup sugar + 1 teaspoon ground cinnamon (for coating)</li>
+            </ul>
+
+            <h3>Optional Chocolate Sauce:</h3>
+            <ul>
+                <li>½ cup heavy cream</li>
+                <li>4 oz dark chocolate, chopped</li>
+                <li>1 tablespoon sugar (optional)</li>
+                <li>Pinch of salt</li>
+            </ul>
+
+            <h2>Instructions:</h2>
+            <ol>
+                <li>In a saucepan, combine water, sugar, salt, and oil. Bring to a boil over medium heat, then remove
+                    from heat and stir in flour until a ball forms.</li>
+
+                <li>Let the dough cool slightly, then transfer to a piping bag fitted with a large star tip.</li>
+
+                <li>Heat oil in a deep skillet or pot to 350–375°F (175–190°C).</li>
+
+                <li>Pipe 4–6 inch strips of dough into the hot oil, cutting with scissors. Fry in batches until golden
+                    brown, turning occasionally, about 2–3 minutes per side.</li>
+
+                <li>Remove with a slotted spoon and drain on paper towels. Roll warm churros in the cinnamon sugar
+                    mixture.</li>
+
+                <li>For chocolate sauce, heat cream in a small saucepan until just simmering. Remove from heat, add
+                    chocolate, and stir until smooth. Add sugar and salt to taste.</li>
+
+                <li>Serve churros warm with chocolate sauce for dipping.</li>
+            </ol>
+
+    <div class="home-button-container">
+        <a href="index.html" class="home-button">Return Home</a>
+    </div>
+    </div>
+    </section>
+
+</body>
+
+</html>

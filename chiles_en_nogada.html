@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What The Sigma</title>
+    <link rel="stylesheet" href="styles/recipe.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Good Recipe, Great Recipe</a>
+
+        <nav class="nav-links">
+            <a href="dishes.html">Dishes</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="search-container">
+            <form action="">
+                <input type="search" placeholder="Search here...">
+                <button type="submit" class="search-button">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+
+        <div class="auth-links">
+            <a href="register.html" class="login">Log In</a>
+            <a href="register.html" class="signup">Sign Up</a>
+        </div>
+    </header>
+
+    <div class="country-carousel-wrapper">
+        <h2 class="carousel-title">Explore Recipes by Country</h2>
+
+        <div class="carousel-container">
+            <button class="carousel-btn left" onclick="scrollCountries('left')">&#10094;</button>
+
+            <div class="country-carousel" id="countryCarousel">
+                <div class="country-track">
+                    <a href="brazil.html" class="country-card">
+                        <img src="images/brazil-flag.png" alt="Brazil Flag">
+                        <h3>Brazil</h3>
+                    </a>
+                    <a href="france.html" class="country-card">
+                        <img src="images/france-flag.png" alt="France Flag">
+                        <h3>France</h3>
+                    </a>
+                    <a href="japan.html" class="country-card">
+                        <img src="images/japan-flag.png" alt="Japan Flag">
+                        <h3>Japan</h3>
+                    </a>
+                    <a href="india.html" class="country-card">
+                        <img src="images/india-flag.png" alt="India Flag">
+                        <h3>India</h3>
+                    </a>
+                    <a href="philippines.html" class="country-card">
+                        <img src="images/philippine_flag.jpg" alt="Philippines Flag">
+                        <h3>Philippines</h3>
+                    </a>
+                    <a href="italy.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/it.png" alt="Italy Flag">
+                        <h3>Italy</h3>
+                    </a>
+                    <a href="thailand.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/th.png" alt="Thailand Flag">
+                        <h3>Thailand</h3>
+                    </a>
+                    <a href="mexico.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/mx.png" alt="Mexico Flag">
+                        <h3>Mexico</h3>
+                    </a>
+                    <a href="us.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/us.png" alt="USA Flag">
+                        <h3>United States</h3>
+                    </a>
+                    <a href="spain.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/es.png" alt="Spain Flag">
+                        <h3>Spain</h3>
+                    </a>
+                    <a href="southkorea.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/kr.png" alt="South Korea Flag">
+                        <h3>South Korea</h3>
+                    </a>
+                    <a href="china.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/cn.png" alt="China Flag">
+                        <h3>China</h3>
+                    </a>
+                </div>
+            </div>
+
+            <button class="carousel-btn right" onclick="scrollCountries('right')">&#10095;</button>
+        </div>
+    </div>
+
+
+    <script>
+        function scrollCountries(direction) {
+            const container = document.getElementById('countryCarousel');
+            const scrollAmount = container.offsetWidth;
+            container.scrollBy({
+                left: direction === 'left' ? -scrollAmount : scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+    <section class="recipe-section">
+        <div class="recipe-container">
+            <img src="images/chiles_en_nogada.jpg" alt="Chiles en Nogada">
+            <h1>Chiles en Nogada</h1>
+            <p>
+                Chiles en Nogada is a traditional Mexican dish made with poblano peppers stuffed with a savory-sweet
+                picadillo, topped with a creamy walnut sauce (nogada), fresh parsley, and pomegranate seeds. Served
+                chilled or at room temperature, it is a patriotic dish often enjoyed during Mexican Independence
+                celebrations.
+            </p>
+
+            <h3>Preparation:</h3>
+            <p>45 minutes (plus soaking time for walnuts)</p>
+
+            <h3>Cook:</h3>
+            <p>45 minutes</p>
+
+            <h3>Total:</h3>
+            <p>1 hour 30 minutes (plus soaking)</p>
+
+            <h2>Ingredients:</h2>
+            <ul>
+                <li>6 large poblano peppers</li>
+                <li>1 lb (450g) ground pork or beef</li>
+                <li>1/2 onion, finely chopped</li>
+                <li>2 cloves garlic, minced</li>
+                <li>1 apple, peeled and diced</li>
+                <li>1 ripe plantain or banana, diced</li>
+                <li>1 peach or pear, peeled and diced</li>
+                <li>1/4 cup raisins</li>
+                <li>1/4 cup slivered almonds</li>
+                <li>1/4 tsp cinnamon</li>
+                <li>Salt and pepper to taste</li>
+                <li>2 tablespoons vegetable oil</li>
+
+                <li><strong>For the Nogada (walnut sauce):</strong></li>
+                <li>1 cup walnuts (soaked overnight and peeled)</li>
+                <li>1/2 cup milk or cream</li>
+                <li>1/4 cup fresh cheese (queso fresco or ricotta)</li>
+                <li>1 tablespoon sugar (optional)</li>
+                <li>Pinch of cinnamon</li>
+                <li>Salt to taste</li>
+
+                <li><strong>For garnish:</strong></li>
+                <li>1/2 cup pomegranate seeds</li>
+                <li>Fresh parsley leaves</li>
+            </ul>
+
+            <h2>Instructions:</h2>
+            <ol>
+                <li>Roast the poblano peppers over an open flame or under a broiler until charred on all sides. Place in
+                    a covered bowl or plastic bag to steam, then peel the skin. Carefully make a slit and remove seeds,
+                    keeping the peppers whole.</li>
+
+                <li>In a skillet, heat oil over medium heat. Sauté the onion and garlic until fragrant. Add the ground
+                    meat and cook until browned.</li>
+
+                <li>Add the chopped apple, plantain, peach, raisins, almonds, cinnamon, salt, and pepper. Cook for 10–15
+                    minutes until the mixture is fragrant and the fruit has softened. Let cool slightly.</li>
+
+                <li>Carefully stuff each poblano pepper with the picadillo filling. Set aside.</li>
+
+                <li>In a blender, combine soaked and peeled walnuts, milk or cream, cheese, cinnamon, sugar (if using),
+                    and a pinch of salt. Blend until smooth and creamy.</li>
+
+                <li>Place stuffed peppers on a serving plate. Pour the walnut sauce generously over each chile.</li>
+
+                <li>Garnish with pomegranate seeds and parsley leaves. Serve chilled or at room temperature.</li>
+            </ol>
+
+    <div class="home-button-container">
+        <a href="index.html" class="home-button">Return Home</a>
+    </div>
+    </div>
+    </section>
+
+</body>
+
+</html>

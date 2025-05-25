@@ -34,80 +34,80 @@
     </div>
   </header>
 
-<div class="country-carousel-wrapper">
-  <h2 class="carousel-title">Explore Recipes by Country</h2>
+  <div class="country-carousel-wrapper">
+    <h2 class="carousel-title">Explore Recipes by Country</h2>
 
-  <div class="carousel-container">
-    <button class="carousel-btn left" onclick="scrollCountries('left')">&#10094;</button>
+    <div class="carousel-container">
+      <button class="carousel-btn left" onclick="scrollCountries('left')">&#10094;</button>
 
-    <div class="country-carousel" id="countryCarousel">
-      <div class="country-track">
-        <a href="brazil.html" class="country-card">
-          <img src="images/brazil-flag.png" alt="Brazil Flag">
-          <h3>Brazil</h3>
-        </a>
-        <a href="france.html" class="country-card">
-          <img src="images/france-flag.png" alt="France Flag">
-          <h3>France</h3>
-        </a>
-        <a href="japan.html" class="country-card">
-          <img src="images/japan-flag.png" alt="Japan Flag">
-          <h3>Japan</h3>
-        </a>
-        <a href="india.html" class="country-card">
-          <img src="images/india-flag.png" alt="India Flag">
-          <h3>India</h3>
-        </a>
-        <a href="philippines.html" class="country-card">
-          <img src="images/philippine_flag.jpg" alt="Philippines Flag">
-          <h3>Philippines</h3>
-        </a>
-        <a href="italy.html" class="country-card">
-          <img src="https://flagcdn.com/w320/it.png" alt="Italy Flag">
-          <h3>Italy</h3>
-        </a>
-        <a href="thailand.html" class="country-card">
-          <img src="https://flagcdn.com/w320/th.png" alt="Thailand Flag">
-          <h3>Thailand</h3>
-        </a>
-        <a href="mexico.html" class="country-card">
-          <img src="https://flagcdn.com/w320/mx.png" alt="Mexico Flag">
-          <h3>Mexico</h3>
-        </a>
-        <a href="us.html" class="country-card">
-          <img src="https://flagcdn.com/w320/us.png" alt="USA Flag">
-          <h3>United States</h3>
-        </a>
-        <a href="spain.html" class="country-card">
-          <img src="https://flagcdn.com/w320/es.png" alt="Spain Flag">
-          <h3>Spain</h3>
-        </a>
-        <a href="southkorea.html" class="country-card">
-          <img src="https://flagcdn.com/w320/kr.png" alt="South Korea Flag">
-          <h3>South Korea</h3>
-        </a>
-        <a href="china.html" class="country-card">
-          <img src="https://flagcdn.com/w320/cn.png" alt="China Flag">
-          <h3>China</h3>
-        </a>
+      <div class="country-carousel" id="countryCarousel">
+        <div class="country-track">
+          <a href="brazil.html" class="country-card">
+            <img src="images/brazil-flag.png" alt="Brazil Flag">
+            <h3>Brazil</h3>
+          </a>
+          <a href="france.html" class="country-card">
+            <img src="images/france-flag.png" alt="France Flag">
+            <h3>France</h3>
+          </a>
+          <a href="japan.html" class="country-card">
+            <img src="images/japan-flag.png" alt="Japan Flag">
+            <h3>Japan</h3>
+          </a>
+          <a href="india.html" class="country-card">
+            <img src="images/india-flag.png" alt="India Flag">
+            <h3>India</h3>
+          </a>
+          <a href="philippines.html" class="country-card">
+            <img src="images/philippine_flag.jpg" alt="Philippines Flag">
+            <h3>Philippines</h3>
+          </a>
+          <a href="italy.html" class="country-card">
+            <img src="https://flagcdn.com/w320/it.png" alt="Italy Flag">
+            <h3>Italy</h3>
+          </a>
+          <a href="thailand.html" class="country-card">
+            <img src="https://flagcdn.com/w320/th.png" alt="Thailand Flag">
+            <h3>Thailand</h3>
+          </a>
+          <a href="mexico.html" class="country-card">
+            <img src="https://flagcdn.com/w320/mx.png" alt="Mexico Flag">
+            <h3>Mexico</h3>
+          </a>
+          <a href="us.html" class="country-card">
+            <img src="https://flagcdn.com/w320/us.png" alt="USA Flag">
+            <h3>United States</h3>
+          </a>
+          <a href="spain.html" class="country-card">
+            <img src="https://flagcdn.com/w320/es.png" alt="Spain Flag">
+            <h3>Spain</h3>
+          </a>
+          <a href="southkorea.html" class="country-card">
+            <img src="https://flagcdn.com/w320/kr.png" alt="South Korea Flag">
+            <h3>South Korea</h3>
+          </a>
+          <a href="china.html" class="country-card">
+            <img src="https://flagcdn.com/w320/cn.png" alt="China Flag">
+            <h3>China</h3>
+          </a>
+        </div>
       </div>
+
+      <button class="carousel-btn right" onclick="scrollCountries('right')">&#10095;</button>
     </div>
-
-    <button class="carousel-btn right" onclick="scrollCountries('right')">&#10095;</button>
   </div>
-</div>
 
 
-    <script>
-        function scrollCountries(direction) {
-            const container = document.getElementById('countryCarousel');
-            const scrollAmount = container.offsetWidth;
-            container.scrollBy({
-                left: direction === 'left' ? -scrollAmount : scrollAmount,
-                behavior: 'smooth'
-            });
-        }
-    </script>
+  <script>
+    function scrollCountries(direction) {
+      const container = document.getElementById('countryCarousel');
+      const scrollAmount = container.offsetWidth;
+      container.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  </script>
   <section class="latest-recipes">
     <h2 class="section-title">Japanese Recipes</h2>
     <div class="recipes-grid">
@@ -115,135 +115,203 @@
       <!-- Sushi -->
       <div class="recipe-card">
         <a href="sushi.html">
-        <div class="image-container">
-          <img src="images/sushi.jpg" alt="Sushi">
-          <div class="overlay">
-            <div class="top-left">3 min read</div>
-            <div class="bottom-info">
-              <h3 class="recipe-title">Sushi</h3>
-              <hr class="white-line">
-              <p>Vinegared rice rolled with fresh seafood, vegetables, and seaweed.</p>
-              <div class="icons">
-                <span>👁️ 20</span>
-                <span>💬 8</span>
-                <span class="like">❤️</span>
+          <div class="image-container">
+            <img src="images/sushi.jpg" alt="Sushi">
+            <div class="overlay">
+              <div class="top-left">3 min read</div>
+              <div class="bottom-info">
+                <h3 class="recipe-title">Sushi</h3>
+                <hr class="white-line">
+                <p>Vinegared rice rolled with fresh seafood, vegetables, and seaweed.</p>
+                <div class="icons">
+                  <span>👁️ 20</span>
+                  <span>💬 8</span>
+                  <span class="like">❤️</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
         </a>
       </div>
 
       <!-- Ramen -->
       <div class="recipe-card">
         <a href="ramen.html">
-        <div class="image-container">
-          <img src="images/ramen.jpg" alt="Ramen">
-          <div class="overlay">
-            <div class="top-left">4 min read</div>
-            <div class="bottom-info">
-              <h3 class="recipe-title">Ramen</h3>
-              <hr class="white-line">
-              <p>Rich broth, chewy noodles, and savory toppings like pork, egg, and nori.</p>
-              <div class="icons">
-                <span>👁️ 18</span>
-                <span>💬 6</span>
-                <span class="like">❤️</span>
+          <div class="image-container">
+            <img src="images/ramen.jpg" alt="Ramen">
+            <div class="overlay">
+              <div class="top-left">4 min read</div>
+              <div class="bottom-info">
+                <h3 class="recipe-title">Ramen</h3>
+                <hr class="white-line">
+                <p>Rich broth, chewy noodles, and savory toppings like pork, egg, and nori.</p>
+                <div class="icons">
+                  <span>👁️ 18</span>
+                  <span>💬 6</span>
+                  <span class="like">❤️</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
         </a>
       </div>
 
       <!-- Tempura -->
       <div class="recipe-card">
         <a href="tempura.html">
-        <div class="image-container">
-          <img src="images/tempura.jpg" alt="Tempura">
-          <div class="overlay">
-            <div class="top-left">2 min read</div>
-            <div class="bottom-info">
-              <h3 class="recipe-title">Tempura</h3>
-              <hr class="white-line">
-              <p>Lightly battered and fried seafood and vegetables — crispy perfection!</p>
-              <div class="icons">
-                <span>👁️ 14</span>
-                <span>💬 4</span>
-                <span class="like">❤️</span>
+          <div class="image-container">
+            <img src="images/tempura.jpg" alt="Tempura">
+            <div class="overlay">
+              <div class="top-left">2 min read</div>
+              <div class="bottom-info">
+                <h3 class="recipe-title">Tempura</h3>
+                <hr class="white-line">
+                <p>Lightly battered and fried seafood and vegetables — crispy perfection!</p>
+                <div class="icons">
+                  <span>👁️ 14</span>
+                  <span>💬 4</span>
+                  <span class="like">❤️</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
         </a>
       </div>
 
       <!-- Okonomiyaki -->
       <div class="recipe-card">
         <a href="okonomiyaki.html">
-        <div class="image-container">
-          <img src="images/okonomiyaki.jpg" alt="Okonomiyaki">
-          <div class="overlay">
-            <div class="top-left">3 min read</div>
-            <div class="bottom-info">
-              <h3 class="recipe-title">Okonomiyaki</h3>
-              <hr class="white-line">
-              <p>Japanese savory pancake with cabbage, pork belly, and a special sauce.</p>
-              <div class="icons">
-                <span>👁️ 11</span>
-                <span>💬 3</span>
-                <span class="like">❤️</span>
+          <div class="image-container">
+            <img src="images/okonomiyaki.jpg" alt="Okonomiyaki">
+            <div class="overlay">
+              <div class="top-left">3 min read</div>
+              <div class="bottom-info">
+                <h3 class="recipe-title">Okonomiyaki</h3>
+                <hr class="white-line">
+                <p>Japanese savory pancake with cabbage, pork belly, and a special sauce.</p>
+                <div class="icons">
+                  <span>👁️ 11</span>
+                  <span>💬 3</span>
+                  <span class="like">❤️</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
         </a>
       </div>
 
       <!-- Takoyaki -->
       <div class="recipe-card">
         <a href="takoyaki.html">
-        <div class="image-container">
-          <img src="images/takoyaki.jpg" alt="Takoyaki">
-          <div class="overlay">
-            <div class="top-left">2 min read</div>
-            <div class="bottom-info">
-              <h3 class="recipe-title">Takoyaki</h3>
-              <hr class="white-line">
-              <p>Ball-shaped snack filled with octopus, pickled ginger, and green onion.</p>
-              <div class="icons">
-                <span>👁️ 10</span>
-                <span>💬 2</span>
-                <span class="like">❤️</span>
+          <div class="image-container">
+            <img src="images/takoyaki.jpg" alt="Takoyaki">
+            <div class="overlay">
+              <div class="top-left">2 min read</div>
+              <div class="bottom-info">
+                <h3 class="recipe-title">Takoyaki</h3>
+                <hr class="white-line">
+                <p>Ball-shaped snack filled with octopus, pickled ginger, and green onion.</p>
+                <div class="icons">
+                  <span>👁️ 10</span>
+                  <span>💬 2</span>
+                  <span class="like">❤️</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
         </a>
       </div>
 
       <!-- Matcha Ice Cream -->
       <div class="recipe-card">
         <a href="matcha_ice_cream.html">
-        <div class="image-container">
-          <img src="images/matcha-ice-cream.jpg" alt="Matcha Ice Cream">
-          <div class="overlay">
-            <div class="top-left">1 min read</div>
-            <div class="bottom-info">
-              <h3 class="recipe-title">Matcha Ice Cream</h3>
-              <hr class="white-line">
-              <p>Creamy Japanese green tea ice cream — bittersweet and refreshing.</p>
-              <div class="icons">
-                <span>👁️ 9</span>
-                <span>💬 1</span>
-                <span class="like">❤️</span>
+          <div class="image-container">
+            <img src="images/matcha-ice-cream.jpg" alt="Matcha Ice Cream">
+            <div class="overlay">
+              <div class="top-left">1 min read</div>
+              <div class="bottom-info">
+                <h3 class="recipe-title">Matcha Ice Cream</h3>
+                <hr class="white-line">
+                <p>Creamy Japanese green tea ice cream — bittersweet and refreshing.</p>
+                <div class="icons">
+                  <span>👁️ 9</span>
+                  <span>💬 1</span>
+                  <span class="like">❤️</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
+
     </div>
   </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section about">
+        <h3>Good Recipe, Great Recipe</h3>
+        <p> Sharing delicious dishes from around the world. Taste the flavors of different cultures, all in one place.
+          Discover the joy of cooking, from street food to fine dining recipes. </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="dishes.html">Dishes</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contacts.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Popular Recipes -->
+      <div class="footer-section recipes">
+        <h4>Popular Recipes</h4>
+        <ul>
+          <li><a href="bibimbap.html">Korean Bibimbap</a></li>
+          <li><a href="japchae.html">Sweet Potato Japchae</a></li>
+          <li><a href="kung_pao_chicken.html">Kung Pao Chicken</a></li>
+          <li><a href="peking_duck.html">Peking Duck</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="footer-section newsletter">
+        <h4>Subscribe to Our Newsletter</h4>
+        <p>Get weekly recipes, cooking tips, and more!</p>
+        <form class="newsletter-form" onsubmit="return false;">
+          <input type="email" placeholder="Your email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-section contact">
+        <h4>Contact</h4>
+        <p><i class="fas fa-envelope"></i> contact@recipehub.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Anywhere, Earth</p>
+        <p><i class="fas fa-clock"></i> Mon – Fri: 9AM – 6PM</p>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-section social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Good Recipe, Great Recipe. All rights reserved.</p>
+    </div>
+  </footer>
 
 </body>
 

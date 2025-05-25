@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What The Sigma</title>
+    <link rel="stylesheet" href="styles/recipe.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Good Recipe, Great Recipe</a>
+
+        <nav class="nav-links">
+            <a href="dishes.html">Dishes</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="search-container">
+            <form action="">
+                <input type="search" placeholder="Search here...">
+                <button type="submit" class="search-button">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+
+        <div class="auth-links">
+            <a href="register.html" class="login">Log In</a>
+            <a href="register.html" class="signup">Sign Up</a>
+        </div>
+    </header>
+
+    <div class="country-carousel-wrapper">
+        <h2 class="carousel-title">Explore Recipes by Country</h2>
+
+        <div class="carousel-container">
+            <button class="carousel-btn left" onclick="scrollCountries('left')">&#10094;</button>
+
+            <div class="country-carousel" id="countryCarousel">
+                <div class="country-track">
+                    <a href="brazil.html" class="country-card">
+                        <img src="images/brazil-flag.png" alt="Brazil Flag">
+                        <h3>Brazil</h3>
+                    </a>
+                    <a href="france.html" class="country-card">
+                        <img src="images/france-flag.png" alt="France Flag">
+                        <h3>France</h3>
+                    </a>
+                    <a href="japan.html" class="country-card">
+                        <img src="images/japan-flag.png" alt="Japan Flag">
+                        <h3>Japan</h3>
+                    </a>
+                    <a href="india.html" class="country-card">
+                        <img src="images/india-flag.png" alt="India Flag">
+                        <h3>India</h3>
+                    </a>
+                    <a href="philippines.html" class="country-card">
+                        <img src="images/philippine_flag.jpg" alt="Philippines Flag">
+                        <h3>Philippines</h3>
+                    </a>
+                    <a href="italy.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/it.png" alt="Italy Flag">
+                        <h3>Italy</h3>
+                    </a>
+                    <a href="thailand.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/th.png" alt="Thailand Flag">
+                        <h3>Thailand</h3>
+                    </a>
+                    <a href="mexico.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/mx.png" alt="Mexico Flag">
+                        <h3>Mexico</h3>
+                    </a>
+                    <a href="us.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/us.png" alt="USA Flag">
+                        <h3>United States</h3>
+                    </a>
+                    <a href="spain.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/es.png" alt="Spain Flag">
+                        <h3>Spain</h3>
+                    </a>
+                    <a href="southkorea.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/kr.png" alt="South Korea Flag">
+                        <h3>South Korea</h3>
+                    </a>
+                    <a href="china.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/cn.png" alt="China Flag">
+                        <h3>China</h3>
+                    </a>
+                </div>
+            </div>
+
+            <button class="carousel-btn right" onclick="scrollCountries('right')">&#10095;</button>
+        </div>
+    </div>
+
+
+    <script>
+        function scrollCountries(direction) {
+            const container = document.getElementById('countryCarousel');
+            const scrollAmount = container.offsetWidth;
+            container.scrollBy({
+                left: direction === 'left' ? -scrollAmount : scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+    <section class="recipe-section">
+        <div class="recipe-container">
+            <img src="images/clam_chowder.png" alt="Clam Chowder">
+            <h1>Clam Chowder</h1>
+            <p>
+                Creamy and comforting, Clam Chowder is a hearty soup made with clams, potatoes, onions, and bacon. This
+                New England classic is perfect for chilly days and is often served with oyster crackers or crusty bread.
+            </p>
+
+            <h3>Preparation:</h3>
+            <p>15–20 minutes</p>
+
+            <h3>Cook:</h3>
+            <p>30–35 minutes</p>
+
+            <h3>Total:</h3>
+            <p>45–55 minutes</p>
+
+            <h2>Ingredients:</h2>
+            <ul>
+                <li>4 slices bacon, chopped</li>
+                <li>1 tablespoon butter</li>
+                <li>1 medium onion, diced</li>
+                <li>2 cloves garlic, minced</li>
+                <li>2 tablespoons all-purpose flour</li>
+                <li>2 cups (480ml) clam juice or broth</li>
+                <li>1 cup (240ml) water or milk (adjust to desired consistency)</li>
+                <li>2 cups potatoes, peeled and diced (Yukon Gold or Russet)</li>
+                <li>1 bay leaf</li>
+                <li>1/2 teaspoon dried thyme</li>
+                <li>1 (6.5 oz or ~185g) can chopped clams, drained (reserve juice)</li>
+                <li>1 cup (240ml) heavy cream</li>
+                <li>Salt and pepper, to taste</li>
+                <li>Fresh parsley or chives, chopped (for garnish)</li>
+            </ul>
+
+            <h2>Instructions:</h2>
+            <ol>
+                <li>In a large pot or Dutch oven, cook bacon over medium heat until crisp. Remove and set aside, leaving
+                    the drippings in the pot.</li>
+                <li>Add butter, then sauté onions until soft, about 5 minutes. Stir in garlic and cook for 1 minute
+                    more.</li>
+                <li>Sprinkle in flour and cook for 1–2 minutes, stirring constantly to form a roux.</li>
+                <li>Gradually whisk in clam juice, reserved clam liquid, and water or milk. Stir until smooth.</li>
+                <li>Add diced potatoes, bay leaf, and thyme. Bring to a boil, then reduce heat and simmer for 15–20
+                    minutes or until potatoes are tender.</li>
+                <li>Stir in chopped clams and heavy cream. Simmer for another 5 minutes without boiling. Season with
+                    salt and pepper.</li>
+                <li>Remove bay leaf. Serve hot, garnished with bacon and fresh herbs.</li>
+            </ol>
+
+            <div class="home-button-container">
+                <a href="index.html" class="home-button">Return Home</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

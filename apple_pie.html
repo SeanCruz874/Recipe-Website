@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What The Sigma</title>
+    <link rel="stylesheet" href="styles/recipe.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Good Recipe, Great Recipe</a>
+
+        <nav class="nav-links">
+            <a href="dishes.html">Dishes</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="search-container">
+            <form action="">
+                <input type="search" placeholder="Search here...">
+                <button type="submit" class="search-button">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+
+        <div class="auth-links">
+            <a href="register.html" class="login">Log In</a>
+            <a href="register.html" class="signup">Sign Up</a>
+        </div>
+    </header>
+
+    <div class="country-carousel-wrapper">
+        <h2 class="carousel-title">Explore Recipes by Country</h2>
+
+        <div class="carousel-container">
+            <button class="carousel-btn left" onclick="scrollCountries('left')">&#10094;</button>
+
+            <div class="country-carousel" id="countryCarousel">
+                <div class="country-track">
+                    <a href="brazil.html" class="country-card">
+                        <img src="images/brazil-flag.png" alt="Brazil Flag">
+                        <h3>Brazil</h3>
+                    </a>
+                    <a href="france.html" class="country-card">
+                        <img src="images/france-flag.png" alt="France Flag">
+                        <h3>France</h3>
+                    </a>
+                    <a href="japan.html" class="country-card">
+                        <img src="images/japan-flag.png" alt="Japan Flag">
+                        <h3>Japan</h3>
+                    </a>
+                    <a href="india.html" class="country-card">
+                        <img src="images/india-flag.png" alt="India Flag">
+                        <h3>India</h3>
+                    </a>
+                    <a href="philippines.html" class="country-card">
+                        <img src="images/philippine_flag.jpg" alt="Philippines Flag">
+                        <h3>Philippines</h3>
+                    </a>
+                    <a href="italy.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/it.png" alt="Italy Flag">
+                        <h3>Italy</h3>
+                    </a>
+                    <a href="thailand.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/th.png" alt="Thailand Flag">
+                        <h3>Thailand</h3>
+                    </a>
+                    <a href="mexico.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/mx.png" alt="Mexico Flag">
+                        <h3>Mexico</h3>
+                    </a>
+                    <a href="us.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/us.png" alt="USA Flag">
+                        <h3>United States</h3>
+                    </a>
+                    <a href="spain.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/es.png" alt="Spain Flag">
+                        <h3>Spain</h3>
+                    </a>
+                    <a href="southkorea.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/kr.png" alt="South Korea Flag">
+                        <h3>South Korea</h3>
+                    </a>
+                    <a href="china.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/cn.png" alt="China Flag">
+                        <h3>China</h3>
+                    </a>
+                </div>
+            </div>
+
+            <button class="carousel-btn right" onclick="scrollCountries('right')">&#10095;</button>
+        </div>
+    </div>
+
+
+    <script>
+        function scrollCountries(direction) {
+            const container = document.getElementById('countryCarousel');
+            const scrollAmount = container.offsetWidth;
+            container.scrollBy({
+                left: direction === 'left' ? -scrollAmount : scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+    <section class="recipe-section">
+        <div class="recipe-container">
+            <img src="images/apple_pie.png" alt="Apple Pie">
+            <h1>Apple Pie</h1>
+            <p>
+                Apple Pie is a classic American dessert featuring a buttery, flaky crust filled with tender spiced
+                apples. Perfect for holidays or any cozy gathering, it’s best served warm with a scoop of vanilla ice
+                cream.
+            </p>
+
+            <h3>Preparation:</h3>
+            <p>30–40 minutes</p>
+
+            <h3>Cook:</h3>
+            <p>50–60 minutes</p>
+
+            <h3>Total:</h3>
+            <p>1 hour 30 minutes – 1 hour 40 minutes</p>
+
+            <h2>Ingredients:</h2>
+            <ul>
+                <li>2 1/2 cups (315g) all-purpose flour</li>
+                <li>1 cup (225g) unsalted butter, cold and cubed</li>
+                <li>1/2 teaspoon salt</li>
+                <li>6–8 tablespoons ice water</li>
+                <li>6 cups apples, peeled and thinly sliced (Granny Smith, Honeycrisp, or a mix)</li>
+                <li>3/4 cup (150g) granulated sugar</li>
+                <li>1/4 cup (50g) brown sugar</li>
+                <li>2 tablespoons all-purpose flour</li>
+                <li>1 teaspoon ground cinnamon</li>
+                <li>1/4 teaspoon ground nutmeg</li>
+                <li>1 tablespoon lemon juice</li>
+                <li>1 egg, beaten (for egg wash)</li>
+                <li>Optional: coarse sugar for sprinkling</li>
+            </ul>
+
+            <h2>Instructions:</h2>
+            <ol>
+                <li>In a large bowl, mix flour and salt. Cut in the butter using a pastry cutter or fork until the
+                    mixture resembles coarse crumbs.</li>
+                <li>Add ice water one tablespoon at a time until dough comes together. Divide in two, shape into discs,
+                    wrap, and chill for at least 1 hour.</li>
+                <li>Preheat oven to 425°F (220°C). In a large bowl, combine sliced apples, both sugars, flour, cinnamon,
+                    nutmeg, and lemon juice. Mix well and set aside.</li>
+                <li>Roll out one dough disc and fit it into a 9-inch (23 cm) pie pan. Add the apple filling and dot with
+                    a few small pieces of butter (optional).</li>
+                <li>Roll out the second dough disc and place it over the top. Trim and crimp the edges. Cut slits in the
+                    top crust or make a lattice. Brush with egg wash and sprinkle with coarse sugar if desired.</li>
+                <li>Bake for 20 minutes, then reduce oven temperature to 375°F (190°C) and continue baking for 30–40
+                    minutes, or until crust is golden and filling is bubbly.</li>
+                <li>Cool for at least 2 hours before slicing. Serve with whipped cream or ice cream.</li>
+            </ol>
+
+            <div class="home-button-container">
+                <a href="index.html" class="home-button">Return Home</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

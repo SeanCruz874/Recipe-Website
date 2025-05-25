@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What The Sigma</title>
+    <link rel="stylesheet" href="styles/recipe.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Good Recipe, Great Recipe</a>
+
+        <nav class="nav-links">
+            <a href="dishes.html">Dishes</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="search-container">
+            <form action="">
+                <input type="search" placeholder="Search here...">
+                <button type="submit" class="search-button">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+
+        <div class="auth-links">
+            <a href="register.html" class="login">Log In</a>
+            <a href="register.html" class="signup">Sign Up</a>
+        </div>
+    </header>
+
+    <div class="country-carousel-wrapper">
+        <h2 class="carousel-title">Explore Recipes by Country</h2>
+
+        <div class="carousel-container">
+            <button class="carousel-btn left" onclick="scrollCountries('left')">&#10094;</button>
+
+            <div class="country-carousel" id="countryCarousel">
+                <div class="country-track">
+                    <a href="brazil.html" class="country-card">
+                        <img src="images/brazil-flag.png" alt="Brazil Flag">
+                        <h3>Brazil</h3>
+                    </a>
+                    <a href="france.html" class="country-card">
+                        <img src="images/france-flag.png" alt="France Flag">
+                        <h3>France</h3>
+                    </a>
+                    <a href="japan.html" class="country-card">
+                        <img src="images/japan-flag.png" alt="Japan Flag">
+                        <h3>Japan</h3>
+                    </a>
+                    <a href="india.html" class="country-card">
+                        <img src="images/india-flag.png" alt="India Flag">
+                        <h3>India</h3>
+                    </a>
+                    <a href="philippines.html" class="country-card">
+                        <img src="images/philippine_flag.jpg" alt="Philippines Flag">
+                        <h3>Philippines</h3>
+                    </a>
+                    <a href="italy.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/it.png" alt="Italy Flag">
+                        <h3>Italy</h3>
+                    </a>
+                    <a href="thailand.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/th.png" alt="Thailand Flag">
+                        <h3>Thailand</h3>
+                    </a>
+                    <a href="mexico.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/mx.png" alt="Mexico Flag">
+                        <h3>Mexico</h3>
+                    </a>
+                    <a href="us.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/us.png" alt="USA Flag">
+                        <h3>United States</h3>
+                    </a>
+                    <a href="spain.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/es.png" alt="Spain Flag">
+                        <h3>Spain</h3>
+                    </a>
+                    <a href="southkorea.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/kr.png" alt="South Korea Flag">
+                        <h3>South Korea</h3>
+                    </a>
+                    <a href="china.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/cn.png" alt="China Flag">
+                        <h3>China</h3>
+                    </a>
+                </div>
+            </div>
+
+            <button class="carousel-btn right" onclick="scrollCountries('right')">&#10095;</button>
+        </div>
+    </div>
+
+
+    <script>
+        function scrollCountries(direction) {
+            const container = document.getElementById('countryCarousel');
+            const scrollAmount = container.offsetWidth;
+            container.scrollBy({
+                left: direction === 'left' ? -scrollAmount : scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+    <section class="recipe-section">
+        <div class="recipe-container">
+            <img src="images/sweet_sour_pork.png" alt="Sweet and Sour Pork">
+            <h1>Sweet and Sour Pork (Tangsuyuk)</h1>
+            <p>
+                Tangsuyuk is a Korean-Chinese dish made with crispy deep-fried pork coated in a glossy sweet and sour
+                sauce. With a balance of tangy, fruity, and savory flavors, it's typically served with stir-fried
+                vegetables and sometimes pineapple.
+            </p>
+
+            <div class="recipe-times">
+                <h3>Preparation:</h3>
+                <p>20–25 minutes</p>
+
+                <h3>Cook:</h3>
+                <p>20 minutes</p>
+
+                <h3>Total:</h3>
+                <p>40–45 minutes</p>
+            </div>
+
+            <h2>Ingredients:</h2>
+            <ul>
+                <li>400g (14 oz) pork loin or shoulder, cut into bite-size strips</li>
+                <li>1/2 teaspoon salt</li>
+                <li>1/4 teaspoon pepper</li>
+                <li>1 egg white</li>
+                <li>1/2 cup potato starch (or cornstarch)</li>
+                <li>Vegetable oil for deep-frying</li>
+
+                <li><strong>Vegetables (optional):</strong></li>
+                <li>1/2 onion, sliced</li>
+                <li>1/2 carrot, julienned</li>
+                <li>1/2 bell pepper, sliced</li>
+                <li>Pineapple chunks (optional)</li>
+
+                <li><strong>Sweet and Sour Sauce:</strong></li>
+                <li>3 tablespoons sugar</li>
+                <li>3 tablespoons vinegar</li>
+                <li>3 tablespoons soy sauce</li>
+                <li>1/2 cup water</li>
+                <li>1 tablespoon ketchup (optional, for a fruity kick)</li>
+                <li>1 tablespoon potato starch (mixed with 2 tbsp water for slurry)</li>
+            </ul>
+
+            <h2>Instructions:</h2>
+            <ol>
+                <li>Season pork with salt and pepper. Add egg white and mix well. Coat pork evenly with potato starch.
+                </li>
+                <li>Heat oil in a deep pan to 170–180°C (340–355°F). Deep-fry pork pieces in batches until crispy and
+                    golden. For extra crunch, double-fry: rest for a few minutes and fry again quickly.</li>
+                <li>In a separate pan, sauté vegetables briefly (if using). Set aside.</li>
+                <li>To make the sauce, combine sugar, vinegar, soy sauce, water, and ketchup (if using) in a saucepan.
+                    Bring to a simmer.</li>
+                <li>Stir in starch slurry and cook until the sauce thickens and turns glossy.</li>
+                <li>Add vegetables and pineapple to the sauce and toss briefly to coat.</li>
+                <li>Serve crispy pork on a plate and pour the sauce over just before eating, or serve sauce separately
+                    for dipping.</li>
+            </ol>
+ 
+    <div class="home-button-container">
+        <a href="index.html" class="home-button">Return Home</a>
+    </div>
+    </div>
+    </section>
+
+</body>
+
+</html>

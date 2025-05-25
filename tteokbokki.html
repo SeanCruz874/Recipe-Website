@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What The Sigma</title>
+    <link rel="stylesheet" href="styles/recipe.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Good Recipe, Great Recipe</a>
+
+        <nav class="nav-links">
+            <a href="dishes.html">Dishes</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="search-container">
+            <form action="">
+                <input type="search" placeholder="Search here...">
+                <button type="submit" class="search-button">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+
+        <div class="auth-links">
+            <a href="register.html" class="login">Log In</a>
+            <a href="register.html" class="signup">Sign Up</a>
+        </div>
+    </header>
+
+    <div class="country-carousel-wrapper">
+        <h2 class="carousel-title">Explore Recipes by Country</h2>
+
+        <div class="carousel-container">
+            <button class="carousel-btn left" onclick="scrollCountries('left')">&#10094;</button>
+
+            <div class="country-carousel" id="countryCarousel">
+                <div class="country-track">
+                    <a href="brazil.html" class="country-card">
+                        <img src="images/brazil-flag.png" alt="Brazil Flag">
+                        <h3>Brazil</h3>
+                    </a>
+                    <a href="france.html" class="country-card">
+                        <img src="images/france-flag.png" alt="France Flag">
+                        <h3>France</h3>
+                    </a>
+                    <a href="japan.html" class="country-card">
+                        <img src="images/japan-flag.png" alt="Japan Flag">
+                        <h3>Japan</h3>
+                    </a>
+                    <a href="india.html" class="country-card">
+                        <img src="images/india-flag.png" alt="India Flag">
+                        <h3>India</h3>
+                    </a>
+                    <a href="philippines.html" class="country-card">
+                        <img src="images/philippine_flag.jpg" alt="Philippines Flag">
+                        <h3>Philippines</h3>
+                    </a>
+                    <a href="italy.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/it.png" alt="Italy Flag">
+                        <h3>Italy</h3>
+                    </a>
+                    <a href="thailand.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/th.png" alt="Thailand Flag">
+                        <h3>Thailand</h3>
+                    </a>
+                    <a href="mexico.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/mx.png" alt="Mexico Flag">
+                        <h3>Mexico</h3>
+                    </a>
+                    <a href="us.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/us.png" alt="USA Flag">
+                        <h3>United States</h3>
+                    </a>
+                    <a href="spain.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/es.png" alt="Spain Flag">
+                        <h3>Spain</h3>
+                    </a>
+                    <a href="southkorea.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/kr.png" alt="South Korea Flag">
+                        <h3>South Korea</h3>
+                    </a>
+                    <a href="china.html" class="country-card">
+                        <img src="https://flagcdn.com/w320/cn.png" alt="China Flag">
+                        <h3>China</h3>
+                    </a>
+                </div>
+            </div>
+
+            <button class="carousel-btn right" onclick="scrollCountries('right')">&#10095;</button>
+        </div>
+    </div>
+
+
+    <script>
+        function scrollCountries(direction) {
+            const container = document.getElementById('countryCarousel');
+            const scrollAmount = container.offsetWidth;
+            container.scrollBy({
+                left: direction === 'left' ? -scrollAmount : scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+    <section class="recipe-section">
+        <div class="recipe-container">
+            <img src="images/tteokbokki.png" alt="Tteokbokki">
+            <h1>Tteokbokki</h1>
+            <p>
+                Tteokbokki is a popular Korean street food made with chewy rice cakes simmered in a spicy, sweet, and
+                savory gochujang-based sauce. It’s comforting, bold, and often enjoyed with fish cakes, boiled eggs, and
+                green onions.
+            </p>
+
+            <div class="recipe-times">
+                <h3>Preparation:</h3>
+                <p>10 minutes</p>
+
+                <h3>Cook:</h3>
+                <p>15–20 minutes</p>
+
+                <h3>Total:</h3>
+                <p>25–30 minutes</p>
+            </div>
+
+            <h2>Ingredients:</h2>
+            <ul>
+                <li>500g (1 lb) Korean rice cakes (tteok)</li>
+                <li>150g (5 oz) Korean fish cakes, sliced</li>
+                <li>2 cups water or anchovy broth</li>
+                <li>2 tablespoons gochujang (Korean red chili paste)</li>
+                <li>1 tablespoon gochugaru (Korean red pepper flakes)</li>
+                <li>1 tablespoon soy sauce</li>
+                <li>1 tablespoon sugar</li>
+                <li>2 cloves garlic, minced</li>
+                <li>1 boiled egg (optional, per serving)</li>
+                <li>1 green onion, chopped</li>
+                <li>Sesame seeds (for garnish)</li>
+            </ul>
+
+            <h2>Instructions:</h2>
+            <ol>
+                <li>Soak rice cakes in warm water for 10–15 minutes if they’re hard or refrigerated.</li>
+                <li>In a pan, combine water (or broth), gochujang, gochugaru, soy sauce, sugar, and garlic. Stir and
+                    bring to a boil.</li>
+                <li>Add rice cakes and fish cakes to the sauce. Stir gently and simmer over medium heat for 10–15
+                    minutes, until the sauce thickens and the rice cakes are soft and chewy.</li>
+                <li>Add boiled eggs (if using) and cook for another 2–3 minutes to warm through.</li>
+                <li>Sprinkle with chopped green onion and sesame seeds before serving.</li>
+                <li>Serve hot and enjoy immediately!</li>
+            </ol>
+
+            <div class="home-button-container">
+                <a href="index.html" class="home-button">Return Home</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
